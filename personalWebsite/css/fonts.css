@@ -1,0 +1,63 @@
+.title {
+  font-size: 120px;
+  color:#ff7272;
+  font-family: 'Raleway', sans-serif;
+}
+
+.blueTitle {
+  font-size: 120px;
+  color:#fafafc;
+  font-family: 'Raleway', sans-serif;
+}
+
+.whiteTitle {
+  font-size: 120px;
+  color:white;
+  font-family: 'Raleway', sans-serif;
+}
+
+.para {
+  font-size: 20px;
+  color:#fafafc;
+  font-family: 'Raleway', sans-serif;
+  font-weight:600;
+  /* font-family: 'Merriweather', serif; */
+}
+
+.material-icons {
+  font-family: 'Material Icons';
+  font-weight: 100;
+  font-style: normal;
+  font-size: 50px;  /* Preferred icon size */
+  display: inline-block;
+  line-height: 1;
+  text-transform: none;
+  letter-spacing: normal;
+  word-wrap: normal;
+  white-space: nowrap;
+  direction: ltr;
+
+  /* Support for all WebKit browsers. */
+  -webkit-font-smoothing: antialiased;
+  /* Support for Safari and Chrome. */
+  text-rendering: optimizeLegibility;
+
+  /* Support for Firefox. */
+  -moz-osx-font-smoothing: grayscale;
+
+  /* Support for IE. */
+  font-feature-settings: 'liga';
+}
+
+.projLabel {
+  font-weight:600;
+  font-family: 'Raleway', sans-serif;
+  position:absolute;
+  left:20px;
+  bottom:10px;
+  color:#1B2432;
+  background-color:#ff7272;
+  padding:5px;
+  padding-left:10px;
+  padding-top:0px;
+}

@@ -1,0 +1,133 @@
+/* apply a natural box layout model to all elements, but allowing components to change */
+html {
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+body{
+  overflow-x : hidden;
+  background-size:cover;
+  background-position:center;
+  background-repeat:no-repeat;
+}
+#sidebar {
+  width:150px;
+  position:fixed;
+  background-color:#403F4C;
+  height:100vh;
+  z-index:10;
+  text-align:center;
+  padding-top:75px;
+  color:#fafafc;
+  border-right: #2F2E38 solid 5px;
+  z-index:100;
+}
+
+#mainContent {
+  width:80vw;
+  margin-left:150px;
+  min-height:100vh;
+  padding:35px;
+  padding-left: 55px;
+  border-left: #F94D4D solid 15px;
+  background-size:contain;
+  background-position:center;
+  background-repeat:no-repeat;
+}
+
+#frame {
+  border-radius: 50%;
+  border: #A9CEF4 solid 3px;
+  width:150px;
+  height:150px;
+  margin:auto;
+  background-image:url("./../images/placeholder.jpg");
+  background-position:center;
+  background-size:contain;
+  transition:0.5s;
+  text-align:center;
+  padding-top:25%;
+  font-size:30px;
+  font-weight:600;
+  font-family: 'Raleway', sans-serif;
+}
+
+::selection {
+  background: #ffb7b7; /* WebKit/Blink Browsers */
+}
+::-moz-selection {
+  background: #ffb7b7; /* Gecko Browsers */
+}
+
+.sideButton{
+  transition:0.5s;
+  padding:5px;
+}
+
+.sideButton:hover{
+  cursor:pointer;
+  color:#F94D4D;
+}
+
+.divider {
+  margin:auto;
+  width:75%;
+  height:0px;
+  border: 1px solid white;
+}
+
+.projectElement {
+    width:33%;
+    margin-left:5px;
+    margin-right:5px;
+    height:300px;
+    background-color:#A9CEF4;
+    display:inline-block;
+    margin:0;
+    position:relative;
+    transition:0.5s;
+}
+
+.projectElement:hover{
+    opacity:0.5;
+    cursor:pointer;
+}
+
+#textbox{
+    height:200px;
+}
+
+#imagebox {
+  margin-top:50px;
+  width:100%;
+  height:100%;
+}
+
+#selector {
+  position:absolute;
+  transition:0.5s;
+  width:0px;
+  height:0px;
+  border-right: #F94D4D 20px solid;
+  border-top:20px transparent solid;
+  border-bottom:20px transparent solid;
+  z-index:5;
+  left:130px;
+}
+
+.back {
+  background-color:#ff7272;
+  display:inline-block;
+  padding:15px;
+  padding-top:0px;
+}
+
+#shader{
+  height:100vh;
+  width:100vw;
+  position:absolute;
+  z-index:-3;
+  background-color:black;
+  opacity:0.5;
+}
