@@ -12,7 +12,7 @@ body{
   background-repeat:no-repeat;
 }
 #sidebar {
-  width:150px;
+  width:130px;
   position:fixed;
   background-color:#403F4C;
   height:100vh;
@@ -26,7 +26,7 @@ body{
 
 #mainContent {
   width:80vw;
-  margin-left:150px;
+  margin-left:130px;
   min-height:100vh;
   padding:35px;
   padding-left: 55px;
@@ -113,7 +113,7 @@ body{
   border-top:20px transparent solid;
   border-bottom:20px transparent solid;
   z-index:5;
-  left:130px;
+  left:110px;
 }
 
 .back {
@@ -130,4 +130,31 @@ body{
   z-index:-3;
   background-color:black;
   opacity:0.5;
+}
+
+#footer {
+  position:absolute;
+  bottom:0px;
+  width:100%;
+  margin:auto;
+  font-family: 'Raleway', sans-serif;
+  font-weight:600;
+  background-color:#1B2432;
+  padding:20px;
+
+}
+#resume {
+    transition:0.5s;
+}
+#github{
+    transition:0.5s;
+}
+#resume:hover{
+  cursor:pointer;
+  color:#F94D4D;
+}
+
+#github:hover{
+  cursor:pointer;
+  color:#F94D4D;
 }
