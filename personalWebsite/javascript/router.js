@@ -23,9 +23,11 @@ function goHome() {
     let title3 = new Writing( "I like to think I'm a writer and an artist", 30, 700, ["whiteTitle"]);
     let title4 = new Writing( "But I still have so much to learn", 30, 700, ["whiteTitle"]);
     let title5 = new Writing( "One of my favorite things to do is:", 30, 700, ["whiteTitle"]);
+    currentScreen = 0;
     $("#selector").css("transform","translate(0px,10px)");
     $("body").css("background-image","url('https://images.unsplash.com/photo-1545899236-81f9c05af041?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80')");
     $("#shader").css("visibility","visible");
+    highlight( $("#home") );
     clearTypewriterList();
     clearMainContent();
     homeHTML();
@@ -47,12 +49,14 @@ function goDevProjects() {
     let title12 = new Writing( "Music Chatrooms", 25, 200, ["projDesc"] );
     let title13 = new Writing( "Very physical", 25, 200, ["projDesc"] );
     let title14 = new Writing( "Competitive Programming", 25, 200, ["projDesc"] );
+    currentScreen = 1;
     $("#selector").css("transform","translate(0px,135px)");
     $("body").css("background-image","");
     $("#shader").css("visibility","hidden");
     clearTypewriterList();
     clearMainContent();
     devProjectsHTML();
+    highlight( $("#devProjects") );
     startTypewriter( $("#textbox"), [ title2, title1 ] );
     startTypewriter( $("#project0"), [ title3 ] );
     startTypewriter( $("#project1"), [ title4 ] );
@@ -76,12 +80,14 @@ function goOtherProjects() {
     let title5 = new Writing( "Writing", 30, 200, ["projLabel"] );
     let title6 = new Writing( "Pencil drawings and more", 30, 200, ["projDesc"] );
     let title7 = new Writing( "Short stories and more", 30, 200, ["projDesc"] );
+    currentScreen = 2;
     $("#selector").css("transform","translate(0px,260px)");
     $("body").css("background-image","");
     $("#shader").css("visibility","hidden");
     clearTypewriterList();
     clearMainContent();
     otherProjectsHTML();
+    highlight( $("#otherProjects") );
     startTypewriter( $("#textbox"), [ title2, title3 ] );
     startTypewriter( $("#project0"), [ title4 ] );
     startTypewriter( $("#project1"), [ title5 ] );
@@ -92,11 +98,13 @@ function goOtherProjects() {
 function goContact() {
     let title2 = new Writing( "Let's get in touch", 100, 750, ["title"] );
     let title3 = new Writing( "I look forward to talking with you", 30, 200, ["whiteTitle"] );
+    currentScreen = 3;
     $("#selector").css("transform","translate(0px,380px)");
     $("body").css("background-image","");
     $("#shader").css("visibility","hidden");
     clearTypewriterList();
     clearMainContent();
+    highlight( $("#contact") );
     startTypewriter( $("#mainContent"), [ title2, title3 ] );
 }
 
@@ -110,22 +118,18 @@ $( document ).ready( function() {
   //This file will route the onclicks and activate their respective js folders.
   //For instance, if the user clicks "home", it will activate the function responsible for changing the mainContent that is stored in home.js.
   $("#home").on( "click", function() {
-    highlight( $("#home") );
     goHome();
   });
 
   $("#devProjects").on( "click", function() {
-    highlight( $("#devProjects") );
     goDevProjects();
   });
 
   $("#otherProjects").on( "click", function() {
-    highlight( $("#otherProjects") );
     goOtherProjects();
   });
 
   $("#contact").on( "click", function() {
-    highlight( $("#contact") );
     goContact();
   });
 

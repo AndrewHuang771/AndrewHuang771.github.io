@@ -36,7 +36,7 @@ $(document).ready( function() {
   	var delta = e.originalEvent.deltaY;
     console.log( delta );
   	if (delta > 0) {
-      if ( currentScreen < numberOfScreens ) {
+      if ( currentScreen < numberOfScreens - 1 ) {
         currentScreen ++;
         goToPage();
       }
