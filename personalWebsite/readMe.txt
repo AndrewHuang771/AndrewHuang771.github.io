@@ -4,7 +4,7 @@ There is a class called Writing, which takes four arguments:
   text: text that you want the typewriter to type.
   size: size of the text that the typewriter will type.
   delay: how long the typewriter waits after finishing typing this instance before moving on to the next if there is a next one.
-  classes: any additional classes you want to add to the text.
+  classes: any additional classes you want to add to the text. (put them in an array) [ class1, class2, etc ]
 
 code:
 let newWriting = new Writing( text, size, delay, classes );
