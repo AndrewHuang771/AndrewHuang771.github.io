@@ -61,3 +61,16 @@
   padding-left:10px;
   padding-top:0px;
 }
+
+.projDesc {
+  font-weight:600;
+  font-family: 'Raleway', sans-serif;
+  position:absolute;
+  left:20px;
+  top:10px;
+  color:#1B2432;
+  /* background-color:#ff7272; */
+  padding:5px;
+  padding-left:10px;
+  padding-top:0px;
+}

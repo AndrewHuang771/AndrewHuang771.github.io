@@ -36,21 +36,32 @@ function goDevProjects() {
     let title6 = new Writing( "OrchestraOnline", 25, 200, ["projLabel"] );
     let title7 = new Writing( "Physics Simulations", 25, 200, ["projLabel"] );
     let title8 = new Writing( "Dmoj", 25, 200, ["projLabel"] );
+    let title9 = new Writing( "An online puzzle game", 25, 200, ["projDesc"] );
+    let title10 = new Writing( "University Info Site", 25, 200, ["projDesc"] );
+    let title11 = new Writing( "Plays you music", 25, 200, ["projDesc"] );
+    let title12 = new Writing( "Music Chatrooms", 25, 200, ["projDesc"] );
+    let title13 = new Writing( "Very physical", 25, 200, ["projDesc"] );
+    let title14 = new Writing( "Competitive Programming", 25, 200, ["projDesc"] );
     $("#selector").css("transform","translate(0px,135px)");
     $("body").css("background-image","");
     $("#shader").css("visibility","hidden");
     clearTypewriterList();
     clearMainContent();
-    setTimeout( function() {
-      devProjectsHTML();
-      startTypewriter( $("#textbox"), [ title2, title1 ] );
-      startTypewriter( $("#project0"), [ title3 ] );
-      startTypewriter( $("#project1"), [ title4 ] );
-      startTypewriter( $("#project2"), [ title5 ] );
-      startTypewriter( $("#project3"), [ title6 ] );
-      startTypewriter( $("#project4"), [ title7 ] );
-      startTypewriter( $("#project5"), [ title8 ] );
-    }, 10 );
+    devProjectsHTML();
+    startTypewriter( $("#textbox"), [ title2, title1 ] );
+    startTypewriter( $("#project0"), [ title3 ] );
+    startTypewriter( $("#project1"), [ title4 ] );
+    startTypewriter( $("#project2"), [ title5 ] );
+    startTypewriter( $("#project3"), [ title6 ] );
+    startTypewriter( $("#project4"), [ title7 ] );
+    startTypewriter( $("#project5"), [ title8 ] );
+
+    startTypewriter( $("#project0"), [ title9 ] );
+    startTypewriter( $("#project1"), [ title10 ] );
+    startTypewriter( $("#project2"), [ title11 ] );
+    startTypewriter( $("#project3"), [ title12 ] );
+    startTypewriter( $("#project4"), [ title13 ] );
+    startTypewriter( $("#project5"), [ title14 ] );
 }
 
 function goOtherProjects() {
