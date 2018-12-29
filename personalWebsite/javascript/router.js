@@ -1,3 +1,5 @@
+let displayTimers = [];
+
 function clearTypewriterList() {
     for ( let i = 0; i < numberOfTypeWriters; i ++ ) {
       typewriterArray[i].delete();
@@ -8,6 +10,9 @@ function clearTypewriterList() {
 
 function clearMainContent() {
   $("#mainContent").empty();
+  for ( let i = 0; i < displayTimers.length; i ++ ) {
+    clearInterval( displayTimers[i] );
+  }
 }
 
 function goHome() {
@@ -67,12 +72,21 @@ function goDevProjects() {
 function goOtherProjects() {
     let title2 = new Writing( "Other Projects", 100, 750, ["title"] );
     let title3 = new Writing( "Some of my hobbies", 30, 200, ["whiteTitle"] );
+    let title4 = new Writing( "Portraits", 30, 200, ["projLabel"] );
+    let title5 = new Writing( "Writing", 30, 200, ["projLabel"] );
+    let title6 = new Writing( "Pencil drawings and more", 30, 200, ["projDesc"] );
+    let title7 = new Writing( "Short stories and more", 30, 200, ["projDesc"] );
     $("#selector").css("transform","translate(0px,260px)");
     $("body").css("background-image","");
     $("#shader").css("visibility","hidden");
     clearTypewriterList();
     clearMainContent();
-    startTypewriter( $("#mainContent"), [ title2, title3 ] );
+    otherProjectsHTML();
+    startTypewriter( $("#textbox"), [ title2, title3 ] );
+    startTypewriter( $("#project0"), [ title4 ] );
+    startTypewriter( $("#project1"), [ title5 ] );
+    startTypewriter( $("#project0"), [ title6 ] );
+    startTypewriter( $("#project1"), [ title7 ] );
 }
 
 function goContact() {

@@ -1,3 +1,5 @@
+By: Andrew Huang
+
 How to use the typewriter:
 
 There is a class called Writing, which takes four arguments:

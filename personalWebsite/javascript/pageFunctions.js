@@ -1,32 +1,52 @@
-function showText( text ) {
-  // $("#frame").css({"background-image":"none", "background-color":"#272b30"}).text( text );
-}
+const numberOfScreens = 4;
+let currentScreen = 0;
 
-function showBkgd() {
-  // $("#frame").css({"background-image":"url('./images/placeholder.jpg')"}).empty();
+function goToPage() {
+  if ( currentScreen === 0 ) {
+    goHome();
+  } else if ( currentScreen === 1 ) {
+    goDevProjects();
+  } else if ( currentScreen === 2) {
+    goOtherProjects();
+  } else if ( currentScreen === 3 ) {
+    goContact();
+  }
 }
 
 $(document).ready( function() {
+
   $("#mainContent").css("width", (window.width - 200) + "px");
 
-  $("#home").mouseenter( function(e) {
-    showText( "Home" );
+  $( document ).keydown( function( keyPressed ) {
+   if ( keyPressed.keyCode == 38 ) {
+     if ( currentScreen > 0 ) {
+       currentScreen --;
+       goToPage();
+     }
+   } else if ( keyPressed.keyCode == 40 ) {
+     if ( currentScreen < (numberOfScreens - 1) ) {
+       currentScreen ++;
+       goToPage();
+     }
+   }
   });
 
-  $("#home").mouseleave( function(e) {
-    showBkgd();
-  });
+  $( document ).on( 'wheel', function(e) {
 
-  $("#devProjects").mouseenter( function(e) {
-    showText("Dev Projects");
-  });
+  	var delta = e.originalEvent.deltaY;
+    console.log( delta );
+  	if (delta > 0) {
+      if ( currentScreen < numberOfScreens ) {
+        currentScreen ++;
+        goToPage();
+      }
+    } else {
+      if ( currentScreen > 0 ) {
+        currentScreen --;
+        goToPage();
+      }
+    };
 
-  $("#otherProjects").on( "hover", function(e) {
-    e.stopPropagation();
-  });
-
-  $("#contact").on( "hover", function(e) {
-    e.stopPropagation();
   });
 
   goHome();

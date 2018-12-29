@@ -123,6 +123,14 @@ body{
   padding-top:0px;
 }
 
+.back1 {
+  background-color:#A9CEF4;
+  display:inline-block;
+  padding:15px;
+  padding-top:0px;
+  visibility:hidden;
+}
+
 #shader{
   height:100vh;
   width:100vw;
