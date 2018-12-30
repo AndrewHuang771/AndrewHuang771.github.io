@@ -65,12 +65,12 @@ function goDevProjects() {
     startTypewriter( $("#project4"), [ title7 ] );
     startTypewriter( $("#project5"), [ title8 ] );
 
-    startTypewriter( $("#project0"), [ title9 ] );
-    startTypewriter( $("#project1"), [ title10 ] );
-    startTypewriter( $("#project2"), [ title11 ] );
-    startTypewriter( $("#project3"), [ title12 ] );
-    startTypewriter( $("#project4"), [ title13 ] );
-    startTypewriter( $("#project5"), [ title14 ] );
+    // startTypewriter( $("#project0"), [ title9 ] );
+    // startTypewriter( $("#project1"), [ title10 ] );
+    // startTypewriter( $("#project2"), [ title11 ] );
+    // startTypewriter( $("#project3"), [ title12 ] );
+    // startTypewriter( $("#project4"), [ title13 ] );
+    // startTypewriter( $("#project5"), [ title14 ] );
 }
 
 function goOtherProjects() {
@@ -91,8 +91,8 @@ function goOtherProjects() {
     startTypewriter( $("#textbox"), [ title2, title3 ] );
     startTypewriter( $("#project0"), [ title4 ] );
     startTypewriter( $("#project1"), [ title5 ] );
-    startTypewriter( $("#project0"), [ title6 ] );
-    startTypewriter( $("#project1"), [ title7 ] );
+    // startTypewriter( $("#project0"), [ title6 ] );
+    // startTypewriter( $("#project1"), [ title7 ] );
 }
 
 function goContact() {
