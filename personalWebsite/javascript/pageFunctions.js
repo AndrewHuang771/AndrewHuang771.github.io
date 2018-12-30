@@ -17,37 +17,37 @@ $(document).ready( function() {
 
   $("#mainContent").css("width", (window.width - 200) + "px");
 
-  $( document ).keydown( function( keyPressed ) {
-   if ( keyPressed.keyCode == 38 ) {
-     if ( currentScreen > 0 ) {
-       currentScreen --;
-       goToPage();
-     }
-   } else if ( keyPressed.keyCode == 40 ) {
-     if ( currentScreen < (numberOfScreens - 1) ) {
-       currentScreen ++;
-       goToPage();
-     }
-   }
-  });
+  // $( document ).keydown( function( keyPressed ) {
+  //  if ( keyPressed.keyCode == 38 ) {
+  //    if ( currentScreen > 0 ) {
+  //      currentScreen --;
+  //      goToPage();
+  //    }
+  //  } else if ( keyPressed.keyCode == 40 ) {
+  //    if ( currentScreen < (numberOfScreens - 1) ) {
+  //      currentScreen ++;
+  //      goToPage();
+  //    }
+  //  }
+  // });
 
-  $( document ).on( 'wheel', function(e) {
+  // $( document ).on( 'wheel', function(e) {
+  //
+  // 	var delta = e.originalEvent.deltaY;
+  //   console.log( delta );
+  // 	if (delta > 0) {
+  //     if ( currentScreen < numberOfScreens - 1 ) {
+  //       currentScreen ++;
+  //       goToPage();
+  //     }
+  //   } else {
+  //     if ( currentScreen > 0 ) {
+  //       currentScreen --;
+  //       goToPage();
+  //     }
+  //   };
 
-  	var delta = e.originalEvent.deltaY;
-    console.log( delta );
-  	if (delta > 0) {
-      if ( currentScreen < numberOfScreens - 1 ) {
-        currentScreen ++;
-        goToPage();
-      }
-    } else {
-      if ( currentScreen > 0 ) {
-        currentScreen --;
-        goToPage();
-      }
-    };
-
-  });
+  // });
 
   goHome();
 });
