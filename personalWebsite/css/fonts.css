@@ -1,23 +1,23 @@
 .title {
-  font-size: 120px;
+  font-size: 100px;
   color:#ff7272;
   font-family: 'Raleway', sans-serif;
 }
 
 .blueTitle {
-  font-size: 120px;
+  font-size: 100px;
   color:#fafafc;
   font-family: 'Raleway', sans-serif;
 }
 
 .whiteTitle {
-  font-size: 120px;
+  font-size: 100px;
   color:white;
   font-family: 'Raleway', sans-serif;
 }
 
 .para {
-  font-size: 20px;
+  font-size: 15px;
   color:#fafafc;
   font-family: 'Raleway', sans-serif;
   font-weight:600;

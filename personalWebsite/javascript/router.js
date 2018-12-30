@@ -37,18 +37,18 @@ function goHome() {
 function goDevProjects() {
     let title1 = new Writing( "Click the boxes to see more", 30, 200, ["whiteTitle"] );
     let title2 = new Writing( "Dev Projects", 100, 1000, ["title"] );
-    let title3 = new Writing( "Soliloquy", 25, 200, ["projLabel"] );
-    let title4 = new Writing( "UnivInfo", 25, 200, ["projLabel"] );
-    let title5 = new Writing( "SoundPlayer", 25, 200, ["projLabel"] );
-    let title6 = new Writing( "OrchestraOnline", 25, 200, ["projLabel"] );
-    let title7 = new Writing( "Physics Simulations", 25, 200, ["projLabel"] );
-    let title8 = new Writing( "Dmoj", 25, 200, ["projLabel"] );
-    let title9 = new Writing( "An online puzzle game", 25, 200, ["projDesc"] );
-    let title10 = new Writing( "University Info Site", 25, 200, ["projDesc"] );
-    let title11 = new Writing( "Plays you music", 25, 200, ["projDesc"] );
-    let title12 = new Writing( "Music Chatrooms", 25, 200, ["projDesc"] );
-    let title13 = new Writing( "Very physical", 25, 200, ["projDesc"] );
-    let title14 = new Writing( "Competitive Programming", 25, 200, ["projDesc"] );
+    let title3 = new Writing( "Soliloquy", 20, 200, ["projLabel"] );
+    let title4 = new Writing( "UnivInfo", 20, 200, ["projLabel"] );
+    let title5 = new Writing( "SoundPlayer", 20, 200, ["projLabel"] );
+    let title6 = new Writing( "OrchestraOnline", 20, 200, ["projLabel"] );
+    let title7 = new Writing( "Physics Simulations", 20, 200, ["projLabel"] );
+    let title8 = new Writing( "Dmoj", 20, 200, ["projLabel"] );
+    let title9 = new Writing( "An online puzzle game", 20, 200, ["projDesc"] );
+    let title10 = new Writing( "University Info Site", 20, 200, ["projDesc"] );
+    let title11 = new Writing( "Plays you music", 20, 200, ["projDesc"] );
+    let title12 = new Writing( "Music Chatrooms", 20, 200, ["projDesc"] );
+    let title13 = new Writing( "Very physical", 20, 200, ["projDesc"] );
+    let title14 = new Writing( "Competitive Programming", 20, 200, ["projDesc"] );
     currentScreen = 1;
     $("#selector").css("transform","translate(0px,135px)");
     $("body").css("background-image","");
@@ -76,8 +76,8 @@ function goDevProjects() {
 function goOtherProjects() {
     let title2 = new Writing( "Other Projects", 100, 750, ["title"] );
     let title3 = new Writing( "Some of my hobbies", 30, 200, ["whiteTitle"] );
-    let title4 = new Writing( "Portraits", 30, 200, ["projLabel"] );
-    let title5 = new Writing( "Writing", 30, 200, ["projLabel"] );
+    let title4 = new Writing( "Portraits", 20, 200, ["projLabel"] );
+    let title5 = new Writing( "Writing", 20, 200, ["projLabel"] );
     let title6 = new Writing( "Pencil drawings and more", 30, 200, ["projDesc"] );
     let title7 = new Writing( "Short stories and more", 30, 200, ["projDesc"] );
     currentScreen = 2;
