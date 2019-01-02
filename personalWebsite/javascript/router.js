@@ -24,7 +24,7 @@ function goHome() {
     let title4 = new Writing( "But I still have so much to learn", 30, 700, ["whiteTitle"]);
     let title5 = new Writing( "One of my favorite things to do is:", 30, 700, ["whiteTitle"]);
     currentScreen = 0;
-    $("#selector").css("transform","translate(0px,10px)");
+    $("#selector").css("transform","translate(0px,5px)");
     $("body").css("background-image","url('https://images.unsplash.com/photo-1545899236-81f9c05af041?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80')");
     $("#shader").css("visibility","visible");
     highlight( $("#home") );
@@ -50,7 +50,7 @@ function goDevProjects() {
     let title13 = new Writing( "Very physical", 20, 200, ["projDesc"] );
     let title14 = new Writing( "Competitive Programming", 20, 200, ["projDesc"] );
     currentScreen = 1;
-    $("#selector").css("transform","translate(0px,135px)");
+    $("#selector").css("transform","translate(0px,120px)");
     $("body").css("background-image","");
     $("#shader").css("visibility","hidden");
     clearTypewriterList();
@@ -81,7 +81,7 @@ function goOtherProjects() {
     let title6 = new Writing( "Pencil drawings and more", 30, 200, ["projDesc"] );
     let title7 = new Writing( "Short stories and more", 30, 200, ["projDesc"] );
     currentScreen = 2;
-    $("#selector").css("transform","translate(0px,260px)");
+    $("#selector").css("transform","translate(0px,235px)");
     $("body").css("background-image","");
     $("#shader").css("visibility","hidden");
     clearTypewriterList();
@@ -99,7 +99,7 @@ function goContact() {
     let title2 = new Writing( "Let's get in touch", 100, 750, ["title"] );
     let title3 = new Writing( "I look forward to talking with you", 30, 200, ["whiteTitle"] );
     currentScreen = 3;
-    $("#selector").css("transform","translate(0px,380px)");
+    $("#selector").css("transform","translate(0px,350px)");
     $("body").css("background-image","");
     $("#shader").css("visibility","hidden");
     clearTypewriterList();
