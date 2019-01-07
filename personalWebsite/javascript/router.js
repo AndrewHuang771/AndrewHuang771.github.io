@@ -25,7 +25,8 @@ function goHome() {
     let title5 = new Writing( "One of my favorite things to do is:", 30, 700, ["whiteTitle"]);
     currentScreen = 0;
     $("#selector").css("transform","translate(0px,5px)");
-    $("body").css("background-image","url('https://images.unsplash.com/photo-1545899236-81f9c05af041?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80')");
+    // $("body").css("background-image","url('https://images.unsplash.com/photo-1545899236-81f9c05af041?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80')");
+    $("body").css("background-image", "url('./personalWebsite/images/bkgd.jfif')");
     $("#shader").css("visibility","visible");
     highlight( $("#home") );
     clearTypewriterList();
