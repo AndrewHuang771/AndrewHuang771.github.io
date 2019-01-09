@@ -257,6 +257,7 @@ $("#mute").on( "click" , function(e) {
     $("#loudness").css("width", (audio.volume*100) + "%");
   } else {
     audio.volume = 0;
+    lastVolume = 0;
     $("#loudness").css("width","0px");
   }
 
