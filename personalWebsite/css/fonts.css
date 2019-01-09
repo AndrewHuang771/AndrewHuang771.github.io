@@ -1,5 +1,6 @@
 .title {
-  font-size: 100px;
+  /* font-size: 100px; */
+  font-size: 3vw;
   color:#ff7272;
   font-family: 'Raleway', sans-serif;
 }
@@ -11,7 +12,9 @@
 }
 
 .whiteTitle {
-  font-size: 100px;
+  /* font-size: 100px; */
+  font-size: 3vw;
+
   color:white;
   font-family: 'Raleway', sans-serif;
 }

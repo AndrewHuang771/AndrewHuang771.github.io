@@ -12,6 +12,6 @@ function devProjectsHTML() {
     $("#mainContent").append( $projectElement );
   }
 
-  $("#project3").attr("onclick", "window.location = 'http://www.orchestraonline.org'");
+  $("#project2").attr("onclick", "window.location = './personalWebsite/projects/soundPlayer/template.html'");
 
 }

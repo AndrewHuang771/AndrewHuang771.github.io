@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Player</title>
+	<link rel="stylesheet" type="text/css" href="css/main.css">
+	<link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+	<div class = "background"></div>
+	<div id = "shader"></div>
+	<div id = wrapper>
+
+		<h1 id = "title"></h1>
+		<div id = "progBar">
+			<div id = "bar"></div>
+			<div id = "knob"></div>
+		</div>
+		<div id = "player">
+			<audio autoplay id = "mainAudio">
+			</audio>
+		</div>
+		<div id = "controller">
+				<p id = "loop" class = "fa fa-repeat menu"></p>
+				<p id = "back" class = "fa fa-backward menu"></p>
+				<p id = "play" class = "fa fa-pause menu"></p>
+				<p id = "next" class = "fa fa-forward menu"></p>
+				<div id = "volume" class = "fa fa-volume-up menu">
+					<div id = "mute"></div>
+					<div id = "volumeBar" >
+						<div id = "loudness"></div>
+					</div>
+				</div>
+		</div>
+	</div>
+
+	<script type="text/javascript" src="javascript/jquery-3.2.1.min.js"></script>
+	<script type="text/javascript" src="javascript/main.js"></script>
+
+</body>
+</html>
