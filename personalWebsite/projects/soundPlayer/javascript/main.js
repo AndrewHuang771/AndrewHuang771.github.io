@@ -82,7 +82,7 @@ function transitionBkgd() {
   var $old = $(".background");
 
   var $newBkgd = $("<div>").addClass("background");
-  $newBkgd.css("background-image","url('C:/Users/ahuan/Documents/soundPlayer/images/bkgd" + counter + ".jpg')");
+  $newBkgd.css("background-image","url('./images/bkgd" + counter + ".jpg')");
   $newBkgd.css("display","none");
   $("body").append( $newBkgd );
   setTimeout( function() {
@@ -98,7 +98,7 @@ function transitionBkgdRev() {
   var $old = $(".background");
 
   var $newBkgd = $("<div>").addClass("background");
-  $newBkgd.css("background-image","url('C:/Users/ahuan/Documents/soundPlayer/images/bkgd" + counter + ".jpg')");
+  $newBkgd.css("background-image","url('./images/bkgd" + counter + ".jpg')");
   $newBkgd.css("z-index","-10");
   $("body").append( $newBkgd );
 
