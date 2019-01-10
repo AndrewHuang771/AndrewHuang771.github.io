@@ -1,5 +1,7 @@
 const numberOfScreens = 4;
 let currentScreen = 0;
+let scrolling = false;
+var isMobile = false;
 
 function goToPage() {
   if ( currentScreen === 0 ) {
@@ -13,9 +15,21 @@ function goToPage() {
   }
 }
 
+
+function isMobileDevice() {
+    return (typeof window.orientation !== "undefined") || (navigator.userAgent.indexOf('IEMobile') !== -1);
+};
+
+
 $(document).ready( function() {
+  isMobile = isMobileDevice();
+  if ( isMobile ) {
+    window.location = "./personalWebsite/mobile/mobileIndex.html";
+  }
 
   $("#mainContent").css("width", (window.width - 200) + "px");
+
+  //Going both directions at once seems to break it. How to prevent this?
 
   // $( document ).keydown( function( keyPressed ) {
   //  if ( keyPressed.keyCode == 38 ) {
@@ -31,23 +45,26 @@ $(document).ready( function() {
   //  }
   // });
 
-  // $( document ).on( 'wheel', function(e) {
-  //
-  // 	var delta = e.originalEvent.deltaY;
-  //   console.log( delta );
-  // 	if (delta > 0) {
-  //     if ( currentScreen < numberOfScreens - 1 ) {
-  //       currentScreen ++;
-  //       goToPage();
-  //     }
-  //   } else {
-  //     if ( currentScreen > 0 ) {
-  //       currentScreen --;
-  //       goToPage();
-  //     }
-  //   };
-
-  // });
+  $( document ).on( 'wheel', function(e) {
+    if ( !scrolling ) {
+      scrolling = true;
+    	var delta = e.originalEvent.deltaY;
+    	if (delta > 0) {
+        if ( currentScreen < numberOfScreens - 1 ) {
+          currentScreen ++;
+          goToPage();
+        }
+      } else {
+        if ( currentScreen > 0 ) {
+          currentScreen --;
+          goToPage();
+        }
+      };
+      scrolling = false;
+    } else {
+      console.log("OVERLAP");
+    }
+  });
 
   goHome();
 });
