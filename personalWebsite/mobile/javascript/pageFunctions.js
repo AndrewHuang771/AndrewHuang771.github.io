@@ -20,9 +20,9 @@ function isMobileDevice() {
     return (typeof window.orientation !== "undefined") || (navigator.userAgent.indexOf('IEMobile') !== -1);
 };
 
-$(document).on("mobileinit", function () {
-  $.mobile.ignoreContentEnabled=true;
-});
+// $(document).on("mobileinit", function () {
+//   $.mobile.ignoreContentEnabled=true;
+// });
 
 $(document).ready( function() {
   isMobile = isMobileDevice();
