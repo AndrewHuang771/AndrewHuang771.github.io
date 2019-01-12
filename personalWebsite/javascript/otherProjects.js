@@ -12,6 +12,7 @@ function otherProjectsHTML() {
     $("#mainContent").append( $projectElement );
   }
 
+  $("#project0").attr("onclick", "window.location = './personalWebsite/art/portfolio.html'");
   $("#project1").attr("onclick", "window.location = './personalWebsite/writing/CloudMaker.html'");
 
 }

@@ -174,3 +174,9 @@ body{
   cursor:pointer;
   color:#F94D4D;
 }
+
+#infoBox {
+  left:175px;
+  top:25px;
+  position:absolute;
+}
