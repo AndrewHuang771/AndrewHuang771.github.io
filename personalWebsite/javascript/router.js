@@ -47,8 +47,12 @@ function goExperience() {
     clearTypewriterList();
     clearMainContent();
     experienceHTML();
-    startTypewriter( $("#textbox"), [ title2, title1 ] );
-    startTypewriter( $("#project0"), [ title3 ] );
+    $("#project0").hide();
+    startTypewriter( $("#textbox"), [ title2, title1 ], function() {
+      $("#project0").fadeIn();
+      startTypewriter( $("#project0"), [ title3 ] );
+    });
+
 }
 
 function goDevProjects() {

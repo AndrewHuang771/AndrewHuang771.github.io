@@ -17,13 +17,14 @@ class Writing {
 }
 
 class TypeWriter {
-  constructor( $parent, writing ) {
+  constructor( $parent, writing, callback ) {
     this.writing = writing;
     this.$parent = $parent;
     this.writer;
     this.writer1;
     this.counter = 0;
     this.order = numberOfTypeWriters;
+    this.callback = callback;
   };
 }
 
@@ -49,6 +50,9 @@ TypeWriter.prototype.render = function( count ) {
         self.counter ++;
         self.render( count + 1 );
       } else {
+        if ( self.callback ) {
+          self.callback();
+        }
         return;
       }
     });
@@ -109,8 +113,8 @@ TypeWriter.prototype.delete = function() {
     clearInterval( self.writer1 );
 }
 
-function startTypewriter( $parent, messages ) {
-    let newTypeWriter = new TypeWriter( $parent, messages );
+function startTypewriter( $parent, messages, callback ) {
+    let newTypeWriter = new TypeWriter( $parent, messages, callback );
     typewriterArray.push( newTypeWriter );
     numberOfTypeWriters ++;
     typewriterArray[ numberOfTypeWriters - 1 ].write();
