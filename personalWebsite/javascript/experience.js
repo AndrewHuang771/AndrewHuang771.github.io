@@ -14,6 +14,7 @@ function experienceHTML() {
   }
 
   $("#project0").attr("onclick", "window.location = './personalWebsite/projects/otosimposter/template.html'");
+  $("#project0").css({"height":"0px", "transition":"0.5s"});
 
   $imagebox.append( $video );
 
