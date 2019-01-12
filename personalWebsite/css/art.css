@@ -19,3 +19,15 @@
   left:175px;
   top:300px;
 }
+
+#absContainer {
+  position:relative;
+}
+
+.portrait {
+  transition:0.5s;
+  position:absolute;
+  width:33%;
+  background-size:contain;
+  background-repeat:no-repeat;
+}
