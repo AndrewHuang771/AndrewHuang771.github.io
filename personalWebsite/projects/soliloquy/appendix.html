@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Soliloquy</title>
+	<link rel="stylesheet" type="text/css" href="css/maim.css">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans|Raleway" rel="stylesheet">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+	<link rel="stylesheet" href="https://www.w3schools.com/w3css/3/w3.css">
+	<script type="text/javascript" src="javascript/jquery-3.2.1.min.js"></script>
+	<script type="text/javascript" src="javascript/maim.js"></script>
+</head>
+<body>
+  <div class="intro">
+    <!-- <div id="player">
+      <audio autoplay hidden>
+        <source src="images/wind.mp3" type="audio/mpeg">
+      </audio> -->
+      <!-- <audio hidden id="err">
+        <source src="images/spark.mp3" type="audio/mpeg">
+      </audio> -->
+    <!-- </div> -->
+    <p class="soliloquy">Soliloquy</p>
+    <p class="text">/səˈliləkwē/</p>
+    <p class="lower">an act of speaking one's thoughts aloud when by oneself or regardless of any hearers, especially by a character in a play.</p>
+    <div class="background2">
+      <div class="background1">
+        <div class="theatre">
+          <div class="wrapper">
+            <div class="clicker" onclick="playAudio()"><p>Enter a new reality</p></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script>
+    var x = document.getElementById("err");
+    function playAudio(){
+      x.play();
+    }
+  </script>
+</body>
+</html>

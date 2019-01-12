@@ -1,0 +1,11 @@
+#titleCard {
+  background-image: url("./../images/cloudTitle.png");
+  width:100%;
+  height:600px;
+  background-size:cover;
+  position:absolute;
+}
+
+#title {
+  font-size:100px;
+}

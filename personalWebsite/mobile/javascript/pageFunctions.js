@@ -15,20 +15,9 @@ function goToPage() {
   }
 }
 
-
-function isMobileDevice() {
-    return (typeof window.orientation !== "undefined") || (navigator.userAgent.indexOf('IEMobile') !== -1);
-};
-
-// $(document).on("mobileinit", function () {
-//   $.mobile.ignoreContentEnabled=true;
-// });
-
 $(document).ready( function() {
-  isMobile = isMobileDevice();
-  $(".ui-page").css("background-color","");
 
-  $("#mainContent").css("width", (window.width - 200) + "px");
+  // $("#mainContent").css("width", (window.width - 200) + "px");
 
   //Going both directions at once seems to break it. How to prevent this?
 

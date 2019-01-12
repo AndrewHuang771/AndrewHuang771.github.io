@@ -12,4 +12,6 @@ function otherProjectsHTML() {
     $("#mainContent").append( $projectElement );
   }
 
+  $("#project1").attr("onclick", "window.location = './personalWebsite/writing/CloudMaker.html'");
+
 }

@@ -1,0 +1,156 @@
+@media only screen and (min-width:550px){
+  body{ 
+   overflow-wrap:normal;
+  }
+  .intro{
+    width:100vw;
+    height:100vh;
+    background-color:#1a1b1c;
+    overflow:hidden;
+  }
+  .theatre{
+    background-repeat:repeat-x;
+    height:100vh;
+    width:100vw;
+    background-image:url("../images/mountains.png");
+    background-position:center;
+    background-size:100vw;
+  }
+  .soliloquy{
+    position:absolute;
+    font-size:100px;
+    margin-top:15vh;
+    margin-left:10vw;
+    color:white;
+    font-family:"Raleway", sans-serif;
+  }
+  .text{
+    position:absolute;
+    color:white;
+    font-family:"Raleway",sans-serif;
+    margin-left:10vw;
+    margin-top:35vh;
+    font-size:5.3vmin;
+    margin-right:10vw;
+  }
+  .lower{
+    position:absolute;
+    color:white;
+    font-family:"Raleway",sans-serif;
+    margin-left:10vw;
+    font-size:5.3vmin;
+    margin-top:50vh;
+    margin-right:10vw;
+  }
+  .clicker{
+    text-align:center;
+    display:inline-block;
+    padding-top:12px;
+    padding-left:20px;
+    padding-right:20px;
+    border:white 1px solid;
+    color:white;
+    transition:0.5s;
+    margin-top:70vh;
+    border-radius:30px;
+    font-family:"Raleway",sans-serif;
+  }
+  .clicker:hover{
+    background-color:white;
+    color:blue;
+    cursor:pointer;
+    }
+  .background2{
+    background-repeat:repeat-x;
+    background-image:url("../images/gridd.png");
+    background-position:center;
+    background-size:100vw;
+  }
+  .wrapper{
+    width:100%;
+    text-align:center;
+  }
+
+}
+/*---------------------------------------------
+Welcome.html
+---------------------------------------------*/
+
+.timer{
+  font-family:"Raleway",sans-serif;
+  font-size:5vmin;
+  margin-left:10vw;
+  margin-top:10vh;
+  float:left;
+  color:black;
+}
+
+.mysteriousVoice{
+  font-family:"Raleway",sans-serif;
+  font-size:5vmin;
+  margin-left:10vw;
+  margin-top:10vh;
+  float:left;
+  color:black;
+}
+
+.onTop{
+  cursor:none;
+}
+
+.behind{
+  position:absolute;
+  z-index: -5;
+  cursor:none;
+}
+
+.absolute{
+  position:absolute;
+  color:white;
+  font-family:"Assistant",sans-serif;
+  font-size:5vmin;
+  z-index:-2;
+  line-height:3vh;
+}
+
+.evil:hover{
+  color:red;
+}
+
+::selection {
+    background-color: white;
+    color: white;
+}
+
+.hidden{
+  visibility:none;
+}
+
+/*-----------------------------------
+evil.html
+------------------------------------*/
+.dark{
+  width:100vw;
+  height:100vh;
+  color:white;
+  background-color:black;
+  animation-name:theatre;
+  animation-duration:15s;
+  animation-iteration-count:infinite;
+  animation-delay:2s;
+}
+
+
+.evilVoice{
+  text-align:center;
+  font-size:5vmin;
+  font-family:"Assistant",sans-serif;
+  padding-top:5vh;
+  display:none;
+}  
+
+@keyframes theatre{
+  0% {background-color:black;color:white;}
+  50% {background-color:white;color:black;}
+  100% {background-color:black;color:white;}
+}

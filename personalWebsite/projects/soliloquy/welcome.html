@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>163940c</title>
+	<link rel="stylesheet" type="text/css" href="css/maim.css">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans|Raleway" rel="stylesheet">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+	<link rel="stylesheet" href="https://www.w3schools.com/w3css/3/w3.css">
+	<script type="text/javascript" src="javascript/jquery-3.2.1.min.js"></script>
+	<script type="text/javascript" src="javascript/welcome.js"></script>
+  <link href="https://fonts.googleapis.com/css?family=Assistant" rel="stylesheet">
+</head>
+<body>
+  <canvas class="behind" id="board"></canvas>
+  <script src='javascript/welcome.js'></script>
+  <div class="onTop">
+    <div class="mysteriousVoice">
+      <p id="displayBox0"></p>
+      <p id="timer"></p>
+  </div>
+  <div class="absolute">
+    <p>11010010010101011111110001001010001011100000101010010101001011010101010101010101100101010</p>
+    <p>00010101010111000001011101010100111011000000111011010000000110110100000011011100000011010</p>
+    <p>100101010101101101111110101010010101001010100110101000100100101001010010100100100101010</p>
+    <p>1101001001<b id="evil"> Id recognized. Procedure begin. </b>10001010100101010010110101010101010101011001010</p>
+    <p>000100100101010110001010011111110001001010001011100000101010010101001011010101011001010</p>
+    <p>110100100101010111111100010010100010111000001010100101010010110101010101010101011001010</p>
+    <p>110100100101010111111100<b id="evil"> Let's start with introductions </b>0100101000101110000010101001100010010</p>
+    <p>110100100101010111111100010010100010111000001010100101010010110101010101010101011001010</p>
+    <p>110100100101010111111100010010100010111000001010100101010010110101010101010101011001010</p>
+    <p>0000011101000101<b id="evil"> I'm 696c6c6d656e6e69, and I'll be your guide </b>110110101010101010101011001010</p>
+    <p>110100100101010111111100010010100010111000001010100101010010110101010101010101011001010</p>
+    <p>110100100101010111111100010010100010111000001010100101010010110101010101010101011001010</p>
+    <p>11010010010101011111110<b id="evil"> I'd like to start properly </b>00101010010111010011010010010110101001010</p>
+    <p>100101000101110000010101001010100101101010101010101010111000010110010001010000000000000000</p>
+    <p>110100100101010111111100010010100010111000001010100101010010110101010101010101011001010</p>
+    <p>110100100101010111 <span id="evil" onclick="explode()"class="evil">Follow me </span>1010010101001011010101010101010101100101001001111100110</p>
+    <p>000100111101001001010110110010100010111000001010100101010010110101010101010101011001010</p>
+    <p>0110000111100100101010111111100010010100010111000001010100101010010110101010101010101001010</p>
+  </div>
+
+    <script>
+      var counter=1;
+      var m=0;
+      var time=999999999;
+      var i=0;
+      var txt=[
+        'Welcome to Soliloquy',
+        "We hope you enjoy your stay",
+        "You are registered as maximum security",
+        "Your id is 163940c",
+        "Time until end: "+time+""
+      ];
+      var timing=[
+        10,
+        10,
+        10,
+        10,
+        10,
+        10
+      ];
+      var speed = 50; 
+      function typeWriter() {
+          if (i < txt[m].length) {
+            document.getElementById("displayBox0").innerHTML += txt[m].charAt(i);
+            i++;
+            setTimeout(typeWriter, speed);
+          }
+          else {
+            m++;
+            i=0;
+            var br=document.createElement("br");
+            document.getElementById("displayBox0").appendChild(br);
+            setTimeout(typeWriter,speed*timing[m]);
+          } 
+        }
+      typeWriter();
+    </script>
+  </div>
+</body>
+</html>
