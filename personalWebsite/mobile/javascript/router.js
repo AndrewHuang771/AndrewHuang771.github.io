@@ -20,7 +20,7 @@ function goHome() {
     // let title10 = new Writing( "Andrew", 40, 750, ["blueTitle"] );
     let title1 = new Writing( "I tell stories through design", 20, 700, ["whiteTitle"] );
     let title2 = new Writing( "The mobile site is still", 20, 10, ["whiteTitle"]);
-    let title6 = new Writing( "under construction1", 20, 10, ["whiteTitle"]);
+    let title6 = new Writing( "under construction2", 20, 10, ["whiteTitle"]);
     let title3 = new Writing( "View this on a desktop :D", 20, 700, ["whiteTitle"]);
     let title4 = new Writing( "But I still have so much to learn", 30, 700, ["whiteTitle"]);
     let title5 = new Writing( "One of my favorite things to do is:", 30, 700, ["whiteTitle"]);
