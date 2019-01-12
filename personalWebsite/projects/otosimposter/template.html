@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootswatch/3.3.7/darkly/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="css/main.css">
+	<link href="https://fonts.googleapis.com/css?family=Merriweather" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+	<script type="text/javascript" src="javascript/jquery-3.2.1.min.js"></script>
+	<script type="text/javascript" src="javascript/main.js"></script>
+</head>
+<body>
+
+	<div class = "hoverLine" style = "top:810px; transform:rotate(30deg); left:-100px">
+	</div>
+
+	<div class = "hoverLine" style = "top:570px">
+	</div>
+
+	<div class = "hoverLine" style = "left:710px; transform:rotate(60deg)">
+	</div>
+
+	<div class = "hoverLine" style = "left:1200px; transform:rotate(-50deg); top:630px">
+	</div>
+
+	<div class = "hoverLine" style = "left:1600px; transform:rotate(40deg); top:610px">
+	</div>
+
+		<div class = "titlecard">
+			<h1>OtoSim : Simulating the Eye and Ear</h1>
+			<img class = "right" src = "uoft.svg">
+			<img class = "left" src = "sk.png">
+			<h4>Andrew Huang <sup>1,2,3</sup>, Han Lin <sup>1,2</sup>, Vito Forte <sup>2,3</sup></h4>
+			<h4>1. University of Toronto, 2. SickKids Hospital, 3. IBBME</h4>
+		</div>
+
+		<!-- <div class="container"> -->
+		  <div class="row">
+		    <div class="col-sm">
+					<!-- <h2 class = "subheading">Introduction</h2> -->
+
+					<div class = "block">
+						<h3 class = "subheading2">Background</h3>
+						<p>Currently, only 5% of graduating medical students claim that they are comfortable performing eye and ear exams.
+							Over 50% of cases of acute otitis media are misdiagnosed and the patient is given a treatment they do not need [1].
+							This results in millions of dollars of wasted resources. The fault lies in the training the medical students receive.
+							Most of the time, they are shown a static image of the ear or eye, with various pathologies and conditions.
+							However, a flat image on a powerpoint slide is very different from looking into an eye or ear through a scope.
+						</p>
+					</div>
+					<br><br>
+					<div class= "intext" id = "eye">
+						<div class = "description">
+							<p>A standard image of</p>
+							<p>of the eye</p>
+						</div>
+					</div>
+					<br>
+					<!-- <br> -->
+					<div class = "block">
+						<h3 class = "subheading2">Objective</h3>
+						<p>OtoSim exists to bridge the gap between training and real world practice by better simulating the conditions of a real eye or ear exam. By improving the fidelity of medical training, graduating medical students will be more confident in their examinations, producing better results and fewer waste of resources. </p>
+					</div>
+		    </div>
+
+
+		    <div class="col-6">
+					<div class = "row">
+						<div class = "col-6" style = "padding-top:0">
+							<br>
+							<div class= "intext" id = "conc">
+								<div class = "description">
+									<p>OtoSim Mobile</p>
+									<p>Clip-on</p>
+								</div>
+							</div>
+							<div class = "block">
+								<h3 class = "subheading2">Results</h3>
+								<p>I developed a mobile learning platform for the eye called OphthoSim, and aided in the completion of Otosim Mobile, the learning platform for the ear.
+								</p>
+								<h3 style = "text-align:left;color:#4f79a8;">For students :</h3>
+								<ul style = "text-align:left; font-size:18px;  font-family: 'Open Sans', sans-serif;">
+									<li>How to use an otoscope or ophthalmoscope</li>
+									<li>Testing the student’s accuracy when using an otoscope or ophthalmoscope.</li>
+									<li>Images along with explanatory text of both normal and pathological ears and eyes taken from real patients [2].</li>
+									<li>Animated images for things such as pneumatic otoscopy for the ear, and nystagmus for the eye.</li>
+									<li>Randomized quizzes for practice</li>
+
+								</ul>
+								<h3 style = "text-align:left;color:#4f79a8;">For teachers :</h3>
+								<ul style = "text-align:left; font-size:18px;  font-family: 'Open Sans', sans-serif;">
+									<li>Make classes with students who are signed up with OtoSim</li>
+									<li>Make online curriculums, presentations, quizzes, and exams for your students</li>
+									<li>View student progress through the modules, quizzes, and exams</li>
+								</ul>
+							</div>
+						</div>
+						<div class = "col-6" style = "padding-top:0">
+							<h2 class = "subheading" style = "margin-bottom:0; color:white">Research</h2>
+
+							<div class = "block">
+								<h3 class = "subheading2">Methodology</h3>
+
+								<p>In order to provide a more realistic rendering of the eye and ear, a few things had to be emphasized:
+
+								The images must be seen through an otoscope of ophthalmoscope in order to simulate what you would see in practice.
+								The images must be accurate, taken from real patients so that the images realistically represent a variety of pathologies.
+								The images should be animated, in order to simulate a real world scenario where things move around and the patient does not sit still.
+
+								The best way to achieve these three goals was a simulation system using a phone.
+								</p>
+							</div>
+							<br>
+							<br>
+
+							<div class= "intext" id = "cerumen">
+								<div class = "description">
+									<p>OtoSim Mobile</p>
+									<p>Content</p>
+								</div>
+							</div>
+							<br><br>
+							<div class = "block">
+								<h3 class = "subheading2">OtoSim Mobile Package</h3>
+
+								<p>OtoSim Mobile comes with an otoscope, a clip-on silicone ear, an adjustable phone mount, and a subscription to the OtoSim software, including all the prior resources mentioned.
+
+								</p>
+								<!-- <p>The version being sold right now is hosted on the cloud and is accessible at mobile.otosim.com. Logging
+								in requires purchase.</p> -->
+							</div>
+
+						</div>
+					</div>
+		    </div>
+
+		    <div class="col-sm">
+					<h2 class = "subheading">Conclusion</h2>
+
+					<div class= "intext" id = "otosim">
+						<div class = "description">
+							<p>Using Otosim</p>
+							<p>Mobile</p>
+						</div>
+					</div>
+
+					<div class = "block">
+						<h3 class = "subheading2">Next Steps</h3>
+						<p>There was a study [3] done in 2009 that showed that training using OtoSim improved medical students’ ability to diagnose conditions related to the ear more so than traditional methods. OphthoSim and the new OtoSim Mobile should also be tested to see if they are more effective than traditional methods.</p>
+					</div>
+
+					<div class = "block">
+						<h3 class = "subheading2">Conclusion</h3>
+						<p>By creating a more realistic practice environment, medical students will be able to prepare themselves more thoroughly for otological exams in the real world.
+
+						</p>
+					</div>
+
+
+
+					<div class = "block">
+						<h3 class = "subheading2">Sources</h3>
+						<div  style = "text-align:left; font-size:12px;">
+							<p style = "font-size:12px">[1] Jones et al., Pediatr Res. 2003;53(suppl):95A</p>
+							<p style = "font-size:12px">[2] Images provided generously by Dr. Hawke, used with permission</p>
+							<p style = "font-size:12px">[3] Vito Forte, OtoSim Study. 2008</p>
+						</div>
+					</div>
+					<img class = "logo" src = "mobile.png">
+
+		    </div>
+
+
+		  </div>
+		<!-- </div> -->
+
+</body>
+</html>
+<!--
+I’m sure most, if not all of you have been to a checkup where the physician looked into your ear with an otoscope. Maybe some of you were unlucky to have been diagnosed with acute otitis media, which is a common ear infection. However there is about a 50% chance that you were misdiagnosed and given a treatment that you didn’t need. Yearly, more than 5 billion dollars go into acute otitis media treatment. Imagine if we could cut that number in half by detecting acute otitis media more accurately and giving the treatment only when needed. That’s a lot of money saved, and only for one specific condition.
+The problem with the misdiagnoses isn’t that the infection is hard to spot. The physicians are simply not trained well enough, and to no fault of their own.
+Here’s the current problem. Look at this picture of the ear. It’s the eardrum. When I show it to you like this, it’s easy to identify the anatomy and diagnose conditions. However, I want you to do this with your hands. <do the action>
+Now look at the picture through the hole you just made. Not so easy now, huh? That’s the picture physicians get through an otoscope, vs what they are trained to see in medical school.
+There have been attempts to remedy this with everything from physical models to exercises with a real patient, but so far there hasn’t been anything that has proved to be effective.
+This summer, I’ve been working with Dr. Forte and Dr. Campisi on creating a mobile simulation system that can accurately simulate what it is like to inspect the ear. It’s called OtoSim, and it works like this: You can mount a physical wax model of an ear onto your phone, and the phone will display real images from real patient’s ears for you to inspect with a model otoscope. The device comes complete with a library of ear-related images and quizzes that will develop the user’s otoscopy skills.
+If the research goes well, it will contribute to the decreased wastage of resources and increased knowledge of otoscopy.
+
+
+-->

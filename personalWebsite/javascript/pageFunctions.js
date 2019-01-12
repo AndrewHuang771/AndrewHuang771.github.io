@@ -1,4 +1,4 @@
-const numberOfScreens = 4;
+const numberOfScreens = 5;
 let currentScreen = 0;
 let scrolling = false;
 var isMobile = false;
@@ -7,10 +7,12 @@ function goToPage() {
   if ( currentScreen === 0 ) {
     goHome();
   } else if ( currentScreen === 1 ) {
+    goExperience();
+  } else if ( currentScreen === 2 ) {
     goDevProjects();
-  } else if ( currentScreen === 2) {
-    goOtherProjects();
   } else if ( currentScreen === 3 ) {
+    goOtherProjects();
+  } else if ( currentScreen === 4 ) {
     goContact();
   }
 }

@@ -180,3 +180,24 @@ body{
   top:25px;
   position:absolute;
 }
+
+.no-border {
+  border:0px transparent;
+}
+
+.projectElementSmall {
+  width:420px;
+  margin-left:5px;
+  margin-right:5px;
+  height:70px;
+  background-color:#A9CEF4;
+  display:inline-block;
+  margin:0;
+  position:relative;
+  transition:0.5s;
+}
+
+.projectElementSmall:hover {
+  cursor:pointer;
+  opacity:0.5;
+}

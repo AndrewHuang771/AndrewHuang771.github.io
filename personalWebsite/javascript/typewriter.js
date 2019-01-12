@@ -1,4 +1,4 @@
-const PERIOD_DELAY = 500;
+const PERIOD_DELAY = 0;
 let typewriterArray = [];
 let numberOfTypeWriters = 0;
 
