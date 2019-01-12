@@ -16,5 +16,6 @@ function devProjectsHTML() {
   $("#project0").attr("onclick", "window.location = './personalWebsite/projects/soliloquy/appendix.html'");
   $("#project5").attr("onclick", "window.location = 'https://github.com/AndrewHuang771/DMOJ-Solutions'");
   $("#project4").attr("onclick", "window.location = './personalWebsite/projects/physics/chp1/index.html'");
+  $("#project3").attr("onclick", "window.location = 'https://github.com/AndrewHuang771/Huesja'");
 
 }

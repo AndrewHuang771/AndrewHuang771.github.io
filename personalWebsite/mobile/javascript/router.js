@@ -33,7 +33,7 @@ function goHome() {
     clearTypewriterList();
     clearMainContent();
     homeHTML();
-    startTypewriter( $(".back"), [ title, title1, title2, title6, title3 ] );
+    startTypewriter( $(".back"), [ title, title1 ] );
 }
 
 function goDevProjects() {
@@ -78,8 +78,8 @@ function goDevProjects() {
 function goOtherProjects() {
     let title2 = new Writing( "Other Projects", 40, 750, ["title"] );
     let title3 = new Writing( "Some of my hobbies", 20, 200, ["whiteTitle"] );
-    let title4 = new Writing( "Portraits", 20, 200, ["projLabel"] );
-    let title5 = new Writing( "Writing", 20, 200, ["projLabel"] );
+    let title4 = new Writing( "Portraits", 15, 200, ["projLabel"] );
+    let title5 = new Writing( "Writing", 15, 200, ["projLabel"] );
     let title6 = new Writing( "Pencil drawings and more", 30, 200, ["projDesc"] );
     let title7 = new Writing( "Short stories and more", 30, 200, ["projDesc"] );
     currentScreen = 2;
@@ -98,8 +98,9 @@ function goOtherProjects() {
 }
 
 function goContact() {
-    let title2 = new Writing( "Let's get in touch", 40, 750, ["title"] );
-    let title3 = new Writing( "I look forward to talking with you", 20, 200, ["whiteTitle"] );
+    let title2 = new Writing( "Contact me", 40, 750, ["title"] );
+    let title3 = new Writing( "Let's talk", 20, 200, ["whiteTitle"] );
+    let title4 = new Writing( "Email: andrewy.huang@mail.utoronto.ca", 20, 200, ["title"] );
     currentScreen = 3;
     $("#selector").css("transform","translate(0px,350px)");
     $("body").css("background-image","");
@@ -107,7 +108,7 @@ function goContact() {
     clearTypewriterList();
     clearMainContent();
     highlight( $("#contact") );
-    startTypewriter( $("#mainContent"), [ title2, title3 ] );
+    startTypewriter( $("#mainContent"), [ title2, title3, title4 ] );
 }
 
 function highlight( $element ) {
