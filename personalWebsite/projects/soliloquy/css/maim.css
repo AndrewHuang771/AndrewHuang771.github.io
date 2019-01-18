@@ -1,5 +1,5 @@
 @media only screen and (min-width:550px){
-  body{ 
+  body{
    overflow-wrap:normal;
   }
   .intro{
@@ -111,6 +111,7 @@ Welcome.html
   font-size:5vmin;
   z-index:-2;
   line-height:3vh;
+  width:60%;
 }
 
 .evil:hover{
@@ -147,7 +148,7 @@ evil.html
   font-family:"Assistant",sans-serif;
   padding-top:5vh;
   display:none;
-}  
+}
 
 @keyframes theatre{
   0% {background-color:black;color:white;}

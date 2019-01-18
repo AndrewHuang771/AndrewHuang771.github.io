@@ -6,17 +6,19 @@
   <link href="https://fonts.googleapis.com/css?family=Open+Sans|Raleway" rel="stylesheet">
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 	<link rel="stylesheet" href="https://www.w3schools.com/w3css/3/w3.css">
-	<script type="text/javascript" src="javascript/jquery-3.2.1.min.js"></script>
-	<script type="text/javascript" src="javascript/welcome.js"></script>
+	<link rel="stylesheet" type="text/css" href="../../css/typewriter.css">
+	<link rel="stylesheet" type="text/css" href="../../css/fonts.css">
   <link href="https://fonts.googleapis.com/css?family=Assistant" rel="stylesheet">
+	<script type="text/javascript" src="../../javascript/jquery-3.2.1.min.js"></script>
+		<script type="text/javascript" src="../../javascript/typewriter.js"></script>
 </head>
 <body>
   <canvas class="behind" id="board"></canvas>
   <script src='javascript/welcome.js'></script>
   <div class="onTop">
     <div class="mysteriousVoice">
-      <p id="displayBox0"></p>
-      <p id="timer"></p>
+      <!-- <p id="displayBox0"></p>
+      <p id="timer"></p> -->
   </div>
   <div class="absolute">
     <p>11010010010101011111110001001010001011100000101010010101001011010101010101010101100101010</p>
@@ -34,48 +36,22 @@
     <p>11010010010101011111110<b id="evil"> I'd like to start properly </b>00101010010111010011010010010110101001010</p>
     <p>100101000101110000010101001010100101101010101010101010111000010110010001010000000000000000</p>
     <p>110100100101010111111100010010100010111000001010100101010010110101010101010101011001010</p>
-    <p>110100100101010111 <span id="evil" onclick="explode()"class="evil">Follow me </span>1010010101001011010101010101010101100101001001111100110</p>
+    <p>110100100101010111<span id="evil" onclick="explode()"class="evil">Follow me </span>1010010101001011010101010101010101100101001001111100110</p>
     <p>000100111101001001010110110010100010111000001010100101010010110101010101010101011001010</p>
     <p>0110000111100100101010111111100010010100010111000001010100101010010110101010101010101001010</p>
+		<p>0110000111100100101010111111100010010100010111000001010100101010010110101010101010101001010</p>
+		<p>0110000111100100101010111111100010010100010111000001010100101010010110101010101010101001010</p>
+		<p>0110000111100100101010111111100010010100010111000001010100101010010110101010101010101001010</p>
+		<p>0110000111100100101010111111100010010100010111000001010100101010010110101010101010101001010</p>
   </div>
 
-    <script>
-      var counter=1;
-      var m=0;
-      var time=999999999;
-      var i=0;
-      var txt=[
-        'Welcome to Soliloquy',
-        "We hope you enjoy your stay",
-        "You are registered as maximum security",
-        "Your id is 163940c",
-        "Time until end: "+time+""
-      ];
-      var timing=[
-        10,
-        10,
-        10,
-        10,
-        10,
-        10
-      ];
-      var speed = 50; 
-      function typeWriter() {
-          if (i < txt[m].length) {
-            document.getElementById("displayBox0").innerHTML += txt[m].charAt(i);
-            i++;
-            setTimeout(typeWriter, speed);
-          }
-          else {
-            m++;
-            i=0;
-            var br=document.createElement("br");
-            document.getElementById("displayBox0").appendChild(br);
-            setTimeout(typeWriter,speed*timing[m]);
-          } 
-        }
-      typeWriter();
-    </script>
   </div>
+
+
+
+
+
+
+
 </body>
 </html>

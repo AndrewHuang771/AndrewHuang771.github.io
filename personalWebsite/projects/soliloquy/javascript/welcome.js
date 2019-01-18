@@ -1,4 +1,19 @@
+// let time = 999999999;
+//
+// function tick() {
+//   setInterval( function() {
+//     time --;
+//
+//   }, 1000 )
+// }
+$(document).ready( function() {
+  let text0 = new Writing( "Welcome to Soliloquy", 40, 750, ["robo"] );
+  let text1 = new Writing( "Please enjoy your stay", 40, 750, ["robo"] );
+  let text2 = new Writing( "", 40, 750, ["robo"] );
+  let text3 = new Writing( "Welcome to Soliloquy", 40, 750, ["robo"] );
 
+  startTypewriter( $(".mysteriousVoice"), [text0] );
+});
 
 var canvas = document.querySelector('canvas');
 
@@ -48,7 +63,7 @@ function animate() {
     c.beginPath();
     c.arc(mouse.x,mouse.y,radius,0,Math.PI*2, false);   //Creates an Outline, needs a stroke propriety
     c.strokeStyle='black';
-    c.fillStyle = 'black'; 
+    c.fillStyle = 'black';
     c.fill();
     radius+=dr;
     if(dr>0.025){
