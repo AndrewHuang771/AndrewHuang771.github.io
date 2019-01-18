@@ -1,5 +1,6 @@
 const PERIOD_DELAY = 500;
 let typewriterArray = [];
+let superSpeed = false;
 let numberOfTypeWriters = 0;
 
 class Writing {
@@ -55,7 +56,7 @@ TypeWriter.prototype.render = function( count ) {
 }
 
 TypeWriter.prototype.makeTimeout = function( msg, i, callback ) {
-    let delay = Math.random()*10 + 20;
+    let delay = 10;
     var self = this;
 
     if ( msg.text[ i - 1 ] === "." ) {

@@ -10,6 +10,7 @@ body{
   background-size:cover;
   background-position:center;
   background-repeat:no-repeat;
+  background-color:#343638;
 }
 #sidebar {
   width:130px;
@@ -22,11 +23,11 @@ body{
   color:#fafafc;
   border-right: #2F2E38 solid 5px;
   z-index:100;
+  display:none;
 }
 
 #mainContent {
   width:80vw;
-  margin-left:130px;
   min-height:100vh;
   padding:35px;
   padding-left: 55px;
@@ -34,6 +35,7 @@ body{
   background-size:contain;
   background-position:center;
   background-repeat:no-repeat;
+  transition:0.5s;
 }
 
 #frame {
@@ -61,8 +63,10 @@ body{
 }
 
 .sideButton{
-  transition:0.5s;
+  transition:1s;
   padding:5px;
+  /* display:none; */
+  opacity:0;
 }
 
 .sideButton:hover{
@@ -121,15 +125,26 @@ body{
   padding:20px;
   padding-top:0px;
   position:absolute;
+  right:10vw;
+  display:none;
 }
 
 .back1 {
+  top:70px;
+  left:270px;
+  position:absolute;
+  z-index:-5;
   background-color:#A9CEF4;
   display:inline-block;
+  transition:0.5s;
+  width:0vw;
+  height:0vh;
+  /* transform:scale( 0.1 ); */
   padding:15px;
   padding-top:0px;
   visibility:hidden;
 }
+
 
 #shader{
   height:100vh;

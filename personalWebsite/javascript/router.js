@@ -1,4 +1,5 @@
 let displayTimers = [];
+let timeouts = [];
 
 function clearTypewriterList() {
     for ( let i = 0; i < numberOfTypeWriters; i ++ ) {
@@ -8,31 +9,123 @@ function clearTypewriterList() {
     numberOfTypeWriters = 0;
 }
 
-function clearMainContent() {
-  $("#mainContent").empty();
-  for ( let i = 0; i < displayTimers.length; i ++ ) {
-    clearInterval( displayTimers[i] );
+function clearTimeouts() {
+  for ( let i = 0; i < timeouts.length; i ++ ) {
+    clearInterval( timeouts[i] );
   }
 }
 
+function clearMainContent() {
+  $("#mainContent").empty();
+  superSpeed = false;
+  for ( let i = 0; i < displayTimers.length; i ++ ) {
+    clearInterval( displayTimers[i] );
+  }
+  timeouts = [];
+}
+
+function makeTitle() {
+  let title = new Writing( "     <h1>Hi I'm Andrew</h1>", 15, 10, ["code"] );
+  let title1 = new Writing( "     <p>I tell stories through design</p>", 15, 10, ["code"] );
+  startTypewriter( $("#mainContent"), [ title, title1 ], function() {
+    makeSidebar();
+  });
+}
+
+function makeRealTitle() {
+  let title = new Writing( "Hi I'm Andrew", 80, 20, ["blueTitle"] );
+  let title1 = new Writing( "I tell stories through design", 20, 10, ["whiteTitle"] );
+  $(".back").css("display","block");
+  startTypewriter( $("#back"), [ title, title1 ], function() {
+  });
+}
+
+function makeSidebar() {
+  let t6 = new Writing( "     <div id = 'sidebar'>", 15, 10, ["code"] );
+  startTypewriter( $("#mainContent"), [ t6 ], function() {
+    $("#mainContent").css("margin-left","130px");
+    $("#sidebar").css("display","block");
+    makeButtons();
+  });
+}
+
+function makeButtons() {
+  let t7 = new Writing( "           <div id = 'home'></div>", 15, 10, ["code"] );
+  let t8 = new Writing( "           <div id = 'experience'></div>", 15, 10, ["code"] );
+  let t9 = new Writing( "           <div id = 'devProjects'></div>", 15, 10, ["code"] );
+  let t10 = new Writing( "           <div id = 'otherProjects'></div>", 15, 10, ["code"] );
+  let t11 = new Writing( "           <div id = 'contact'></div>", 15, 10, ["code"] );
+  let t12 = new Writing( "      </div>", 15, 10, ["code"] );
+
+  startTypewriter( $("#mainContent"), [ t7 ], function() {
+    $("#home").css("opacity","1");
+  });
+
+  timeouts.push( setTimeout( function() {
+    startTypewriter( $("#mainContent"), [ t8 ], function() {
+      $("#experience").css("opacity","1");
+    });
+  }, 100 ) );
+
+  timeouts.push( setTimeout( function() {
+    startTypewriter( $("#mainContent"), [ t9 ], function() {
+      $("#devProjects").css("opacity","1");
+    });
+  }, 200 ) );
+
+  timeouts.push( setTimeout( function() {
+    startTypewriter( $("#mainContent"), [ t10 ], function() {
+      $("#otherProjects").css("opacity","1");
+    } );
+
+  }, 300 ) );
+
+  timeouts.push( setTimeout( function() {
+    startTypewriter( $("#mainContent"), [ t11, t12 ], function() {
+      $("#contact").css("opacity","1");
+      makeFooter();
+    } );
+
+  }, 400 ) );
+}
+
+function makeFooter() {
+  let t0 = new Writing( "</body>", 15, 10, ["codeRed"] );
+  let t1= new Writing( "</head>", 15, 10, ["codeRed"] );
+  let t2 = new Writing( "</html>", 15, 10, ["codeRed"] );
+  startTypewriter( $("#mainContent"), [ t0, t1, t2 ], function() {
+    timeouts.push( setTimeout( function() {
+      let t3 = new Writing( "<!-- Feel Free to look around by the way -->", 15, 10, ["codeGreen"] );
+      let t4 = new Writing( "<!-- Press the buttons or scroll to look around! -->", 15, 10, ["codeGreen"] );
+      startTypewriter( $("#mainContent"), [ t3, t4 ])
+    }, 5000 ));
+  });
+}
+
 function goHome() {
-    let title = new Writing( "Hi I'm Andrew", 80, 750, ["blueTitle"] );
-    let title1 = new Writing( "I tell stories through design", 20, 700, ["whiteTitle"] );
-    let title2 = new Writing( "I'm a student at the University of Toronto studying Computer Engineering", 30, 700, ["whiteTitle"]);
-    let title6 = new Writing( "I'm a fullstack developer", 30, 700, ["whiteTitle"]);
-    let title3 = new Writing( "I like to think I'm a writer and an artist", 30, 700, ["whiteTitle"]);
-    let title4 = new Writing( "But I still have so much to learn", 30, 700, ["whiteTitle"]);
-    let title5 = new Writing( "One of my favorite things to do is:", 30, 700, ["whiteTitle"]);
+    let t0 = new Writing( "<!DOCTYPE HTML>", 15, 10, ["code"] );
+    let t1= new Writing( "<html>", 15, 10, ["codeRed"] );
+    let t2 = new Writing( "<head>", 15, 10, ["codeRed"] );
+    let t3 = new Writing( "     <title> Home </title>", 15, 10, ["code"] );
+    let t4 = new Writing( "</head>", 15, 10, ["codeRed"] );
+    let t5 = new Writing( "<body>", 15, 10, ["codeRed"] );
     currentScreen = 0;
     $("#selector").css("transform","translate(0px,5px)");
-    // $("body").css("background-image","url('https://images.unsplash.com/photo-1545899236-81f9c05af041?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80')");
-    $("body").css("background-image", "url('./personalWebsite/images/bkgd.jfif')");
+    // $("body").css("background-image", "url('./personalWebsite/images/bkgd.jfif')");
     $("#shader").css("visibility","visible");
     highlight( $("#home") );
     clearTypewriterList();
     clearMainContent();
+    clearTimeouts();
     homeHTML();
-    startTypewriter( $(".back"), [ title, title1 ] );
+    superSpeed = true;
+    startTypewriter( $("#mainContent"), [ t0,t1,t2,t3 ], function() {
+      $("title").text("Home");
+      startTypewriter( $("#mainContent"), [ t4, t5 ], function() {
+        makeTitle();
+        makeRealTitle();
+      });
+    });
 }
 
 function goExperience() {
@@ -46,6 +139,7 @@ function goExperience() {
     highlight( $("#experience") );
     clearTypewriterList();
     clearMainContent();
+    clearTimeouts();
     experienceHTML();
 
     startTypewriter( $("#textbox"), [ title2, title1 ], function() {
@@ -76,6 +170,7 @@ function goDevProjects() {
     $("#shader").css("visibility","hidden");
     clearTypewriterList();
     clearMainContent();
+    clearTimeouts();
     devProjectsHTML();
     highlight( $("#devProjects") );
     startTypewriter( $("#textbox"), [ title2, title1 ] );
@@ -86,12 +181,6 @@ function goDevProjects() {
     startTypewriter( $("#project4"), [ title7 ] );
     startTypewriter( $("#project5"), [ title8 ] );
 
-    // startTypewriter( $("#project0"), [ title9 ] );
-    // startTypewriter( $("#project1"), [ title10 ] );
-    // startTypewriter( $("#project2"), [ title11 ] );
-    // startTypewriter( $("#project3"), [ title12 ] );
-    // startTypewriter( $("#project4"), [ title13 ] );
-    // startTypewriter( $("#project5"), [ title14 ] );
 }
 
 function goOtherProjects() {
@@ -107,6 +196,7 @@ function goOtherProjects() {
     $("#shader").css("visibility","hidden");
     clearTypewriterList();
     clearMainContent();
+    clearTimeouts();
     otherProjectsHTML();
     highlight( $("#otherProjects") );
     startTypewriter( $("#textbox"), [ title2, title3 ] );
@@ -126,6 +216,7 @@ function goContact() {
     $("#shader").css("visibility","hidden");
     clearTypewriterList();
     clearMainContent();
+    clearTimeouts();
     highlight( $("#contact") );
     startTypewriter( $("#mainContent"), [ title2, title3, title4 ] );
 }

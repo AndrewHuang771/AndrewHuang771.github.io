@@ -66,7 +66,7 @@ TypeWriter.prototype.makeTimeout = function( msg, i, callback ) {
       delay = PERIOD_DELAY;
     }
 
-    $("#blinker" + self.order + self.counter ).css("font-size", (msg.size + 10) + "px" );
+    $("#blinker" + self.order + self.counter ).css("font-size", (msg.size + 10 - 8) + "px" );
     $("#blinker" + self.order + self.counter ).css("transform", "translate( 0, " + ((3)*(msg.size/60) + 2) + "px)" );
 
     if ( i === 0 ) {

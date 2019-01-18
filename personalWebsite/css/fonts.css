@@ -27,6 +27,21 @@
   /* font-family: 'Merriweather', serif; */
 }
 
+.code {
+  font-family: 'Inconsolata', monospace;
+  color:#fafafc;
+}
+
+.codeRed {
+  font-family: 'Inconsolata', monospace;
+  color:#ff7272;
+}
+
+.codeGreen {
+  font-family: 'Inconsolata', monospace;
+  color:#80a86a;
+}
+
 .material-icons {
   font-family: 'Material Icons';
   font-weight: 100;
