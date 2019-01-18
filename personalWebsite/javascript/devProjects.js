@@ -12,7 +12,9 @@ function devProjectsHTML() {
     $("#mainContent").append( $projectElement );
   }
 
+
   $("#project2").attr("onclick", "window.location = './personalWebsite/projects/soundPlayer/template.html'");
+  $("#project1").attr("onclick", "window.location = 'https://github.com/AndrewHuang771/univInfo'");
   $("#project0").attr("onclick", "window.location = './personalWebsite/projects/soliloquy/appendix.html'");
   $("#project5").attr("onclick", "window.location = 'https://github.com/AndrewHuang771/DMOJ-Solutions'");
   $("#project4").attr("onclick", "window.location = './personalWebsite/projects/physics/chp1/index.html'");

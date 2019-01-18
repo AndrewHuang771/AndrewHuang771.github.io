@@ -118,8 +118,9 @@ body{
 .back {
   background-color:#ff7272;
   display:inline-block;
-  padding:15px;
+  padding:0px;
   padding-top:0px;
+  position:absolute;
 }
 
 .back1 {
@@ -200,4 +201,18 @@ body{
 .projectElementSmall:hover {
   cursor:pointer;
   opacity:0.5;
+}
+
+#backheader{
+  height:20px;
+  width:100%;
+  background-color:#F94D4D;
+}
+
+#backheader:hover{
+  cursor:move;
+}
+
+#back {
+  position:absolute;
 }

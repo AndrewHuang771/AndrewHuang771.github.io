@@ -9,3 +9,25 @@
 #title {
   font-size:100px;
 }
+
+#titleWrapper {
+  margin-bottom:50px;
+}
+
+#subtitle {
+  font-size:40px;
+}
+
+.writingText {
+  color:white;
+  font-size:20px;
+  line-height:50px;
+  white-space:pre-wrap;
+}
+
+#wrapper {
+  padding-left:10%;
+  padding-right:10%;
+  padding-top:50px;
+  padding-bottom:10%;
+}
