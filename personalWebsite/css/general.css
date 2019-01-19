@@ -7,11 +7,45 @@ html {
 }
 body{
   overflow-x : hidden;
+  overflow-y: hidden;
   background-size:cover;
   background-position:center;
   background-repeat:no-repeat;
-  background-color:#343638;
+  background-color:black;
+  padding:0;
+  margin:0;
 }
+#header{
+  position:relative;
+  top:0;
+  width:100%;
+  height:40px;
+  background-color:#111721;  z-index:10;
+}
+
+.headerButton {
+  display:inline-block;
+  width:20%;
+  color:white;
+  position:absolute;
+  bottom:0px;
+  padding:1%;
+  padding-top:5px;
+  border-bottom: 0px solid #1e1f21;
+  border-left: 50px solid transparent;
+  border-right: 50px solid transparent;
+  height: 0;
+  font-family: 'Raleway', sans-serif;
+  transition:0.5s;
+  text-align:center;
+}
+
+.headerButton:hover {
+  border-bottom: 30px solid #403F4C;
+  cursor:pointer;
+}
+
+
 #sidebar {
   width:130px;
   position:fixed;
@@ -29,9 +63,9 @@ body{
 #mainContent {
   width:80vw;
   min-height:100vh;
-  padding:35px;
-  padding-left: 55px;
-  border-left: #F94D4D solid 15px;
+  padding:0px;
+  padding-left: 0px;
+  /* border-left: #F94D4D solid 15px; */
   background-size:contain;
   background-position:center;
   background-repeat:no-repeat;
@@ -120,13 +154,14 @@ body{
 }
 
 .back {
-  background-color:#ff7272;
   display:inline-block;
   padding:20px;
   padding-top:0px;
   position:absolute;
-  right:10vw;
+  left:16%;
   display:none;
+  z-index:10;
+  text-align:center;
 }
 
 .back1 {
@@ -150,7 +185,7 @@ body{
   height:100vh;
   width:100vw;
   position:absolute;
-  z-index:-3;
+  z-index:3;
   background-color:black;
   opacity:0.5;
 }
@@ -163,6 +198,7 @@ body{
   font-family: 'Raleway', sans-serif;
   font-weight:600;
   background-color:#1B2432;
+  transition:0.5s;
   padding:20px;
 }
 #footer1 {
@@ -173,12 +209,15 @@ body{
   font-family: 'Raleway', sans-serif;
   font-weight:600;
   background-color:#1B2432;
-  padding:20px;
+  transition:0.5s;
+  padding:0px;
 }
 #resume {
+  color:white;
     transition:0.5s;
 }
 #github{
+  color:white;
     transition:0.5s;
 }
 #resume:hover{
@@ -218,7 +257,7 @@ body{
   opacity:0.5;
 }
 
-#backheader{
+#codeBoxheader{
   height:20px;
   width:100%;
   background-color:#F94D4D;
@@ -230,4 +269,17 @@ body{
 
 #back {
   position:absolute;
+}
+
+#codeBox {
+  position:absolute;
+  right:0px;
+  top:0px;
+  width:350px;
+  height:100vh;
+  background-color:#1e1f21;
+  padding:20px;
+  z-index:10;
+  margin-top:40px;
+  border-left:black solid 5px;
 }

@@ -1,20 +1,14 @@
 .title {
-  /* font-size: 100px; */
-  font-size: 3vw;
   color:#ff7272;
   font-family: 'Raleway', sans-serif;
 }
 
 .blueTitle {
-  font-size: 100px;
   color:#fafafc;
   font-family: 'Raleway', sans-serif;
 }
 
 .whiteTitle {
-  /* font-size: 100px; */
-  font-size: 3vw;
-
   color:white;
   font-family: 'Raleway', sans-serif;
 }
@@ -95,4 +89,9 @@
 
 .writingText {
   white-space: pre-wrap;
+}
+
+.shiftDown {
+  transform:translate( 0px, 15px);
+  font-size:13px;
 }

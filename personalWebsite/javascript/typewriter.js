@@ -1,6 +1,7 @@
 const PERIOD_DELAY = 0;
 let typewriterArray = [];
 let numberOfTypeWriters = 0;
+let superSpeed = false;
 
 class Writing {
   constructor( text, size, delay, classes ) {
@@ -9,7 +10,7 @@ class Writing {
     this.size = size;
     this.classes = classes;
     this.delay = delay;
-    this.$element.css( "font-size", size + "px" );
+    this.$element.css( "font-size", size );
     for ( let i = 0; i < this.classes.length; i ++ ) {
       this.$element.addClass( classes[i] );
     }
@@ -60,6 +61,9 @@ TypeWriter.prototype.render = function( count ) {
 
 TypeWriter.prototype.makeTimeout = function( msg, i, callback ) {
     let delay = Math.random()*10 + 20;
+    if ( superSpeed ) {
+      delay = 15;
+    }
     var self = this;
 
     if ( msg.text[ i - 1 ] === "." ) {

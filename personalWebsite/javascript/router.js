@@ -11,8 +11,10 @@ function clearTypewriterList() {
 
 function clearTimeouts() {
   for ( let i = 0; i < timeouts.length; i ++ ) {
+    clearTimeout( timeouts[i] );
     clearInterval( timeouts[i] );
   }
+  timeouts = [];
 }
 
 function clearMainContent() {
@@ -21,67 +23,76 @@ function clearMainContent() {
   for ( let i = 0; i < displayTimers.length; i ++ ) {
     clearInterval( displayTimers[i] );
   }
-  timeouts = [];
+
 }
 
 function makeTitle() {
-  let title = new Writing( "     <h1>Hi I'm Andrew</h1>", 15, 10, ["code"] );
-  let title1 = new Writing( "     <p>I tell stories through design</p>", 15, 10, ["code"] );
-  startTypewriter( $("#mainContent"), [ title, title1 ], function() {
+  let title = new Writing( "     <h1>Hi I'm Andrew</h1>", 13, 10, ["code"] );
+  let title1 = new Writing( "     <p>Let's tell some great stories</p>", 13, 10, ["code"] );
+  startTypewriter( $("#codeBox"), [ title, title1 ], function() {
     makeSidebar();
   });
 }
 
 function makeRealTitle() {
-  let title = new Writing( "Hi I'm Andrew", 80, 20, ["blueTitle"] );
-  let title1 = new Writing( "I tell stories through design", 20, 10, ["whiteTitle"] );
-  $(".back").css("display","block");
+  let title = new Writing( "Hi I'm Andrew", "7vw", 500, ["blueTitle"] );
+  let title1 = new Writing( "Let's tell some great stories", "3vw", 10, ["whiteTitle"] );
+
+  let top = $("#vid").height();
+  let ownHeight = $("#back").height();
+  $("#back").css({
+    "transform":"translate( 0px, " + (top/2 - 150) + "px )",
+    "display":"block",
+    "font-size":"2vw"
+  });
+
   startTypewriter( $("#back"), [ title, title1 ], function() {
+
   });
 }
 
 function makeSidebar() {
-  let t6 = new Writing( "     <div id = 'sidebar'>", 15, 10, ["code"] );
-  startTypewriter( $("#mainContent"), [ t6 ], function() {
-    $("#mainContent").css("margin-left","130px");
-    $("#sidebar").css("display","block");
+  let t6 = new Writing( "     <div id = 'header'>", 13, 10, ["code"] );
+  startTypewriter( $("#codeBox"), [ t6 ], function() {
+    // $("#mainContent").css("margin-left","130px");
+    // $("#sidebar").css("display","block");
     makeButtons();
   });
 }
 
 function makeButtons() {
-  let t7 = new Writing( "           <div id = 'home'></div>", 15, 10, ["code"] );
-  let t8 = new Writing( "           <div id = 'experience'></div>", 15, 10, ["code"] );
-  let t9 = new Writing( "           <div id = 'devProjects'></div>", 15, 10, ["code"] );
-  let t10 = new Writing( "           <div id = 'otherProjects'></div>", 15, 10, ["code"] );
-  let t11 = new Writing( "           <div id = 'contact'></div>", 15, 10, ["code"] );
-  let t12 = new Writing( "      </div>", 15, 10, ["code"] );
+  let t7 = new Writing( "           <div id = 'home'></div>", 13, 10, ["code"] );
+  let t8 = new Writing( "           <div id = 'experience'></div>", 13, 10, ["code"] );
+  let t9 = new Writing( "           <div id = 'devProjects'></div>", 13, 10, ["code"] );
+  let t10 = new Writing( "           <div id = 'otherProjects'></div>", 13, 10, ["code"] );
+  let t11 = new Writing( "           <div id = 'contact'></div>", 13, 10, ["code"] );
+  let t12 = new Writing( "      </div>", 13, 10, ["code"] );
 
-  startTypewriter( $("#mainContent"), [ t7 ], function() {
+  startTypewriter( $("#codeBox"), [ t7 ], function() {
     $("#home").css("opacity","1");
   });
 
   timeouts.push( setTimeout( function() {
-    startTypewriter( $("#mainContent"), [ t8 ], function() {
+    startTypewriter( $("#codeBox"), [ t8 ], function() {
       $("#experience").css("opacity","1");
     });
   }, 100 ) );
 
   timeouts.push( setTimeout( function() {
-    startTypewriter( $("#mainContent"), [ t9 ], function() {
+    startTypewriter( $("#codeBox"), [ t9 ], function() {
       $("#devProjects").css("opacity","1");
     });
   }, 200 ) );
 
   timeouts.push( setTimeout( function() {
-    startTypewriter( $("#mainContent"), [ t10 ], function() {
+    startTypewriter( $("#codeBox"), [ t10 ], function() {
       $("#otherProjects").css("opacity","1");
     } );
 
   }, 300 ) );
 
   timeouts.push( setTimeout( function() {
-    startTypewriter( $("#mainContent"), [ t11, t12 ], function() {
+    startTypewriter( $("#codeBox"), [ t11, t12 ], function() {
       $("#contact").css("opacity","1");
       makeFooter();
     } );
@@ -90,42 +101,62 @@ function makeButtons() {
 }
 
 function makeFooter() {
-  let t0 = new Writing( "</body>", 15, 10, ["codeRed"] );
-  let t1= new Writing( "</head>", 15, 10, ["codeRed"] );
-  let t2 = new Writing( "</html>", 15, 10, ["codeRed"] );
-  startTypewriter( $("#mainContent"), [ t0, t1, t2 ], function() {
-    timeouts.push( setTimeout( function() {
-      let t3 = new Writing( "<!-- Feel Free to look around by the way -->", 15, 10, ["codeGreen"] );
-      let t4 = new Writing( "<!-- Press the buttons or scroll to look around! -->", 15, 10, ["codeGreen"] );
-      startTypewriter( $("#mainContent"), [ t3, t4 ])
-    }, 5000 ));
+  let footer = new Writing( "      <div id = 'footer'></div>", 13, 10, ["code"] );
+  let t0 = new Writing( "</body>", 13, 10, ["codeRed"] );
+  let t1= new Writing( "</head>", 13, 10, ["codeRed"] );
+  let t2 = new Writing( "</html>", 13, 10, ["codeRed"] );
+  startTypewriter( $("#codeBox"), [ footer ], function() {
+    // $("#footer1").css("padding","20px");
+    startTypewriter( $("#codeBox"), [ t0, t1, t2 ], function() {
+
+      let time1 = setTimeout( function() {
+        let t3 = new Writing( "<!-- Feel Free to look around by the way -->", 13, 10, ["codeGreen"] );
+        let t4 = new Writing( "<!-- Try scrolling or pressing the buttons! -->", 13, 10, ["codeGreen"] );
+        startTypewriter( $("#codeBox"), [ t3, t4 ] );
+      }, 5000 );
+
+      timeouts.push( time1 );
+    });
   });
 }
 
 function goHome() {
-    let t0 = new Writing( "<!DOCTYPE HTML>", 15, 10, ["code"] );
-    let t1= new Writing( "<html>", 15, 10, ["codeRed"] );
-    let t2 = new Writing( "<head>", 15, 10, ["codeRed"] );
-    let t3 = new Writing( "     <title> Home </title>", 15, 10, ["code"] );
-    let t4 = new Writing( "</head>", 15, 10, ["codeRed"] );
-    let t5 = new Writing( "<body>", 15, 10, ["codeRed"] );
+
+    let t0 = new Writing( "<!DOCTYPE HTML>", 13, 10, ["code"] );
+    let t1= new Writing( "<html>", 13, 10, ["codeRed"] );
+    let t2 = new Writing( "<head>", 13, 10, ["codeRed"] );
+    let t3 = new Writing( "     <title> Home </title>", 13, 10, ["code"] );
+    let css = new Writing( "     <link href='main.css'>", 13, 10, ["code"] );
+    let t4 = new Writing( "</head>", 13, 10, ["codeRed"] );
+    let t5 = new Writing( "<body>", 13, 10, ["codeRed"] );
     currentScreen = 0;
     $("#selector").css("transform","translate(0px,5px)");
-    // $("body").css("background-image", "url('./personalWebsite/images/bkgd.jfif')");
     $("#shader").css("visibility","visible");
-    highlight( $("#home") );
+
     clearTypewriterList();
     clearMainContent();
     clearTimeouts();
     homeHTML();
+    if ( !styled ) {
+      styleHeader();
+      styled = true;
+    }
+    highlight( $("#header0") );
     superSpeed = true;
-    startTypewriter( $("#mainContent"), [ t0,t1,t2,t3 ], function() {
-      $("title").text("Home");
-      startTypewriter( $("#mainContent"), [ t4, t5 ], function() {
-        makeTitle();
-        makeRealTitle();
+    if ( firstTime || !firstTime ) {
+      startTypewriter( $("#codeBox"), [ t0,t1,t2,t3 ], function() {
+        $("title").text("Home");
+        startTypewriter( $("#codeBox"), [ css ], function() {
+          $(".code").css({"color":"#fafafc","font-family":"'Inconsolata', monospace"});
+          startTypewriter( $("#codeBox"), [ t4, t5 ], function() {
+            makeTitle();
+            makeRealTitle();
+          });
+        });
       });
-    });
+      firstTime = false;
+    }
+
 }
 
 function goExperience() {
@@ -136,7 +167,7 @@ function goExperience() {
     $("#selector").css("transform","translate(0px,100px)");
     $("#shader").css("visibility","hidden");
     $("body").css("background-image","");
-    highlight( $("#experience") );
+    highlight( $("#header1") );
     clearTypewriterList();
     clearMainContent();
     clearTimeouts();
@@ -172,7 +203,7 @@ function goDevProjects() {
     clearMainContent();
     clearTimeouts();
     devProjectsHTML();
-    highlight( $("#devProjects") );
+    highlight( $("#header2") );
     startTypewriter( $("#textbox"), [ title2, title1 ] );
     startTypewriter( $("#project0"), [ title3 ] );
     startTypewriter( $("#project1"), [ title4 ] );
@@ -198,12 +229,10 @@ function goOtherProjects() {
     clearMainContent();
     clearTimeouts();
     otherProjectsHTML();
-    highlight( $("#otherProjects") );
+    highlight( $("#header3") );
     startTypewriter( $("#textbox"), [ title2, title3 ] );
     startTypewriter( $("#project0"), [ title4 ] );
     startTypewriter( $("#project1"), [ title5 ] );
-    // startTypewriter( $("#project0"), [ title6 ] );
-    // startTypewriter( $("#project1"), [ title7 ] );
 }
 
 function goContact() {
@@ -217,36 +246,36 @@ function goContact() {
     clearTypewriterList();
     clearMainContent();
     clearTimeouts();
-    highlight( $("#contact") );
+    highlight( $("#header4") );
     startTypewriter( $("#mainContent"), [ title2, title3, title4 ] );
 }
 
 function highlight( $element ) {
-    $(".sideButton").css("color","");
-    $element.css("color","#F94D4D");
+    $(".headerButton").css("border-bottom","30px solid #1e1f21");
+    $element.css("border-bottom","30px solid #403F4C");
 }
 
 $( document ).ready( function() {
-  highlight( $("#home") );
+  highlight( $("#header0") );
   //This file will route the onclicks and activate their respective js folders.
   //For instance, if the user clicks "home", it will activate the function responsible for changing the mainContent that is stored in home.js.
-  $("#home").on( "click", function() {
+  $("#header0").on( "click", function() {
     goHome();
   });
 
-  $("#experience").on( "click", function() {
+  $("#header1").on( "click", function() {
     goExperience();
   });
 
-  $("#devProjects").on( "click", function() {
+  $("#header2").on( "click", function() {
     goDevProjects();
   });
 
-  $("#otherProjects").on( "click", function() {
+  $("#header3").on( "click", function() {
     goOtherProjects();
   });
 
-  $("#contact").on( "click", function() {
+  $("#header4").on( "click", function() {
     goContact();
   });
 
