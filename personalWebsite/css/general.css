@@ -32,7 +32,7 @@ body{
   bottom:0px;
   padding:1%;
   padding-top:5px;
-  border-bottom: 0px solid #1e1f21;
+  border-bottom: 30px solid #1e1f21;
   border-left: 50px solid transparent;
   border-right: 50px solid transparent;
   height: 0;
@@ -182,6 +182,11 @@ body{
   z-index:10;
   height:40px;
   border-top:black solid 5px;
+  color:white;
+  font-weight:100;
+  padding-top:4px;
+  padding-left:5px;
+  font-size:22px;
 }
 #resume {
   color:white;
@@ -252,4 +257,9 @@ body{
   z-index:10;
   margin-top:40px;
   border-left:black solid 5px;
+}
+
+.footerIcon {
+  float:right;
+  margin-right:10px;
 }

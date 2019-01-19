@@ -94,3 +94,10 @@
   transform:translate( 0px, 15px);
   font-size:13px;
 }
+
+.footerText{
+  font-size:15px;
+  display:inline-block;
+  transform:translate(0, -10px);
+  white-space:pre-wrap;
+}
