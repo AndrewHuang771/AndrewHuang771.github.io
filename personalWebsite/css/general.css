@@ -45,21 +45,6 @@ body{
   cursor:pointer;
 }
 
-
-#sidebar {
-  width:130px;
-  position:fixed;
-  background-color:#403F4C;
-  height:100vh;
-  z-index:10;
-  text-align:center;
-  padding-top:75px;
-  color:#fafafc;
-  border-right: #2F2E38 solid 5px;
-  z-index:100;
-  display:none;
-}
-
 #mainContent {
   width:80vw;
   min-height:100vh;
@@ -94,18 +79,6 @@ body{
 }
 ::-moz-selection {
   background: #ffb7b7; /* Gecko Browsers */
-}
-
-.sideButton{
-  transition:1s;
-  padding:5px;
-  /* display:none; */
-  opacity:0;
-}
-
-.sideButton:hover{
-  cursor:pointer;
-  color:#F94D4D;
 }
 
 .divider {
@@ -191,17 +164,6 @@ body{
 }
 
 #footer {
-  position:absolute;
-  bottom:0px;
-  width:100%;
-  margin:auto;
-  font-family: 'Raleway', sans-serif;
-  font-weight:600;
-  background-color:#1B2432;
-  transition:0.5s;
-  padding:20px;
-}
-#footer1 {
   position:fixed;
   bottom:0px;
   width:100%;
@@ -211,14 +173,26 @@ body{
   background-color:#1B2432;
   transition:0.5s;
   padding:0px;
+  z-index:10;
+  height:40px;
+  border-top:black solid 5px;
 }
 #resume {
   color:white;
-    transition:0.5s;
+  transition:0.5s;
+  position:absolute;
+  right:40px;
+  top:10px;
+  font-size:20px;
+  font-weight:100;
 }
 #github{
   color:white;
-    transition:0.5s;
+  transition:0.5s;
+  position:absolute;
+  right:10px;
+  top:10px;
+  font-size:20px;
 }
 #resume:hover{
   cursor:pointer;
@@ -255,16 +229,6 @@ body{
 .projectElementSmall:hover {
   cursor:pointer;
   opacity:0.5;
-}
-
-#codeBoxheader{
-  height:20px;
-  width:100%;
-  background-color:#F94D4D;
-}
-
-#backheader:hover{
-  cursor:move;
 }
 
 #back {
