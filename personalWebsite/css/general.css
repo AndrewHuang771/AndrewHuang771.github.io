@@ -20,7 +20,8 @@ body{
   top:0;
   width:100%;
   height:40px;
-  background-color:#111721;  z-index:10;
+  background-color:#111721;
+  z-index:10;
 }
 
 .headerButton {
@@ -48,13 +49,15 @@ body{
 #mainContent {
   width:80vw;
   min-height:100vh;
-  padding:0px;
-  padding-left: 0px;
-  /* border-left: #F94D4D solid 15px; */
-  background-size:contain;
-  background-position:center;
-  background-repeat:no-repeat;
   transition:0.5s;
+}
+
+.mainWrapper {
+  position:absolute;
+  top:100px;
+  left:50px;
+  width:75%;
+  height:75%;
 }
 
 #frame {
@@ -89,9 +92,9 @@ body{
 }
 
 .projectElement {
-    width:33%;
-    margin-left:5px;
-    margin-right:5px;
+    width:33.333%;
+    border-left:black solid 5px;
+    border-bottom:black solid 5px;
     height:25vh;
     background-color:#A9CEF4;
     display:inline-block;
@@ -111,7 +114,10 @@ body{
 
 #imagebox {
   width:100%;
-  height:100%;
+  /* height:100%; */
+  background-size:cover;
+  background-repeat:no-repeat;
+  /* background-image:url("./../images/bkgd.jfif"); */
 }
 
 #selector {
