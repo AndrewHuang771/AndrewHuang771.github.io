@@ -96,15 +96,17 @@ body{
     border-left:black solid 5px;
     border-bottom:black solid 5px;
     height:25vh;
-    background-color:#A9CEF4;
+
     display:inline-block;
     margin:0;
     position:relative;
     transition:0.5s;
+    /* opacity:0.2; */
 }
 
 .projectElement:hover{
-    opacity:0.5;
+    opacity:0.1;
+    background-color:black;
     cursor:pointer;
 }
 
@@ -117,7 +119,7 @@ body{
   /* height:100%; */
   background-size:cover;
   background-repeat:no-repeat;
-  /* background-image:url("./../images/bkgd.jfif"); */
+  background-image:url("./../images/skyline.jpg");
 }
 
 #selector {

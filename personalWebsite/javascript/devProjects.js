@@ -20,4 +20,6 @@ function devProjectsHTML() {
   $("#project4").attr("onclick", "window.location = './personalWebsite/projects/physics/chp1/index.html'");
   $("#project3").attr("onclick", "window.location = 'https://github.com/AndrewHuang771/Huesja'");
 
+  // $imagebox.css("background-image","utl('./personalWebsite/images/skyline.jpg')");
+
 }
