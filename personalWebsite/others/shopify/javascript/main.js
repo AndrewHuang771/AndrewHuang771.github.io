@@ -156,9 +156,6 @@ $(document).ready( function() {
     }
 
     if ( $("#" + e.target.id ).parent().hasClass("selected") || $("#" + e.target.id ).hasClass("selected") ) {
-      // $("#" + e.target.id ).removeClass("selected");
-      // $("#" + e.target.id ).parent().removeClass("selected");
-
       searchAndDestroy( newFavorite.title, favorites );
     } else {
       $("#" + e.target.id ).addClass("selected");
