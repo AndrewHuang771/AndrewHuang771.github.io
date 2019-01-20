@@ -1,20 +1,17 @@
 function homeHTML() {
-  let $codeBox = $("<div>");
-  $codeBox.addClass("codeBox").attr("id","codeBox");
+  // let $codeBox = $("<div>");
+  // $codeBox.addClass("codeBox").attr("id","codeBox");
 
   let $back = $("<div>");
   $back.addClass("back");
   $back.attr("id","back");
-
-  let $drag = $("<div>");
-  $drag.attr("id","codeBoxheader");
 
   let $back1 = $("<div>");
   $back1.addClass("back1");
   $back1.attr("id","back1");
 
   // $codeBox.prepend( $drag );
-  $("#mainContent").append( $codeBox );
+  // $("body").append( $codeBox );
   $("#mainContent").append( $back, $back1 );
 
   let $video = $("<video>");
