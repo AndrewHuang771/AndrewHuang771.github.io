@@ -1,0 +1,85 @@
+/* apply a natural box layout model to all elements, but allowing components to change */
+html {
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+
+#header {
+  margin-top:2vh;
+  width:100%;
+  height:13vh;
+  padding:20px;
+  text-align:center;
+  background-image: linear-gradient(to right, #1d6d8e, #69aa82 );
+}
+
+#searchTab{
+  width:85%;
+  height:5vh;
+  margin:auto;
+  text-align:center;
+}
+
+#searchBar {
+  display:inline-block;
+  width:90%;
+}
+
+#mainContent {
+  max-height: 40vh;
+  overflow-y:scroll;
+  width:80%;
+  margin:auto;
+}
+
+#favorite {
+  width:80%;
+  margin-left: 10%;
+  /* padding-left:10%;
+  padding-right:10%; */
+  /* position:absolute; */
+  /* top:70vh; */
+  height:28vh;
+  overflow-y: auto;
+}
+
+#shader {
+  background-color:#f7fffa;
+  position:absolute;
+  top:70vh;
+  height:28vh;
+  width:100%;
+}
+
+.inline {
+  display:inline-block;
+  width:5%;
+}
+
+.wrapper {
+  /* position:relative; */
+  width:100%;
+  margin:auto;
+  clear:both;
+  margin-bottom:10px;
+}
+
+.titleCard {
+  /* position:absolute; */
+  float:left;
+  width:35%;
+}
+
+.info {
+  /* position:absolute; */
+  float:right;
+  width:60%;
+}
+
+.fav {
+  float:left;
+  width:5%;
+}
