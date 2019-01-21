@@ -216,7 +216,7 @@ function goDevProjects() {
 }
 
 function goOtherProjects() {
-    let title2 = new Writing( "Other Projects", 80, 750, ["title"] );
+    let title2 = new Writing( "Other Projects", 40, 750, ["title"] );
     let title3 = new Writing( "Some of my hobbies", 20, 200, ["whiteTitle"] );
     let title4 = new Writing( "Portraits", 20, 200, ["projLabel"] );
     let title5 = new Writing( "Writing", 20, 200, ["projLabel"] );
