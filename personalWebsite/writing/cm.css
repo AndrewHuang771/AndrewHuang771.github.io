@@ -8,6 +8,7 @@
 
 #title {
   font-size:100px;
+  font-family: 'Aleo', serif;
 }
 
 #titleWrapper {
@@ -16,6 +17,7 @@
 
 #subtitle {
   font-size:40px;
+  font-family: 'Aleo', serif;
 }
 
 .writingText {
@@ -23,6 +25,7 @@
   font-size:20px;
   line-height:50px;
   white-space:pre-wrap;
+  font-family: 'Aleo', serif;
 }
 
 #wrapper {
