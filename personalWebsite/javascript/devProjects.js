@@ -1,10 +1,9 @@
 function devProjectsHTML() {
-  let $mainWrapper = $("<div>").addClass("mainWrapper");
   let $textbox = $("<div>").attr( "id", "textbox" );
   let $imagebox = $("<div>").attr( "id", "imagebox" );
 
-  $mainWrapper.append( $textbox, $imagebox );
-  $("#mainContent").append( $mainWrapper );
+  $("#codeBox").append( $textbox );
+  $("#mainContent").append( $imagebox );
 
   for ( let i = 0; i < 4; i ++ ) {
     let $projectElement = $("<div>");
@@ -22,4 +21,6 @@ function devProjectsHTML() {
 
   $imagebox.css("background-image","url('./personalWebsite/images/skyline.jpg')");
 
+  let height = $("#mainContent").height();
+  $("#imagebox").css("height",height);
 }

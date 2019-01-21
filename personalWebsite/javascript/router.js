@@ -183,7 +183,7 @@ function goExperience() {
 
 function goDevProjects() {
     let title1 = new Writing( "Click the boxes to see more", 20, 200, ["whiteTitle"] );
-    let title2 = new Writing( "Projects", 80, 1000, ["title"] );
+    let title2 = new Writing( "Projects", 50, 1000, ["title"] );
     let title3 = new Writing( "Soliloquy", 20, 200, ["projLabel"] );
     let title4 = new Writing( "UnivInfo", 20, 200, ["projLabel"] );
     let title5 = new Writing( "SoundPlayer", 20, 200, ["projLabel"] );

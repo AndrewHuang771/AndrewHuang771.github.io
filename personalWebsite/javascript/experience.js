@@ -34,6 +34,4 @@ function experienceHTML() {
 
   $imagebox.css("background-image","");
   document.getElementById("codeBox").contentEditable = false;
-
-
 }
