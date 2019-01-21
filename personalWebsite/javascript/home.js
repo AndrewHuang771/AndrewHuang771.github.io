@@ -36,7 +36,14 @@ function homeHTML() {
   $("#mainContent").append( $video );
 
   let width = window.innerWidth - 350;
+  let height = $("#mainContent").height();
   $("#mainContent").css("width",width);
+
+
+  $("#back").css({
+    "left": (width/5) + "px",
+    "top": (height/5) + "px"
+  });
 
   document.getElementById("back").contentEditable = true;
   document.getElementById("codeBox").contentEditable = true;

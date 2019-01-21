@@ -19,6 +19,7 @@ function clearTimeouts() {
 
 function clearMainContent() {
   $("#mainContent").empty();
+  $("#codeBox").empty();
   superSpeed = false;
   for ( let i = 0; i < displayTimers.length; i ++ ) {
     clearInterval( displayTimers[i] );
@@ -161,7 +162,7 @@ function goHome() {
 
 function goExperience() {
     let title1 = new Writing( "Full Stack Developer at OtoSim", 20, 200, ["whiteTitle"] );
-    let title2 = new Writing( "Work Experience", 80, 1000, ["title"] );
+    let title2 = new Writing( "Experience", 50, 1000, ["title"] );
     let title3 = new Writing( "Poster", 20, 200, ["projLabel"] );
     currentScreen = 1;
     $("#selector").css("transform","translate(0px,100px)");
@@ -174,7 +175,7 @@ function goExperience() {
     experienceHTML();
 
     startTypewriter( $("#textbox"), [ title2, title1 ], function() {
-      $("#project0").css("height","70px");
+      $("#project0").css("height","50px");
       startTypewriter( $("#project0"), [ title3 ] );
     });
 
@@ -182,7 +183,7 @@ function goExperience() {
 
 function goDevProjects() {
     let title1 = new Writing( "Click the boxes to see more", 20, 200, ["whiteTitle"] );
-    let title2 = new Writing( "Dev Projects", 80, 1000, ["title"] );
+    let title2 = new Writing( "Projects", 80, 1000, ["title"] );
     let title3 = new Writing( "Soliloquy", 20, 200, ["projLabel"] );
     let title4 = new Writing( "UnivInfo", 20, 200, ["projLabel"] );
     let title5 = new Writing( "SoundPlayer", 20, 200, ["projLabel"] );
@@ -205,12 +206,12 @@ function goDevProjects() {
     devProjectsHTML();
     highlight( $("#header2") );
     startTypewriter( $("#textbox"), [ title2, title1 ] );
-    startTypewriter( $("#project0"), [ title3 ] );
-    startTypewriter( $("#project1"), [ title4 ] );
+    startTypewriter( $("#project0"), [ title4 ] );
+    startTypewriter( $("#project1"), [ title6 ] );
     startTypewriter( $("#project2"), [ title5 ] );
-    startTypewriter( $("#project3"), [ title6 ] );
-    startTypewriter( $("#project4"), [ title7 ] );
-    startTypewriter( $("#project5"), [ title8 ] );
+    startTypewriter( $("#project3"), [ title8 ] );
+    // startTypewriter( $("#project4"), [ title7 ] );
+    // startTypewriter( $("#project5"), [ title8 ] );
 
 }
 
@@ -219,8 +220,6 @@ function goOtherProjects() {
     let title3 = new Writing( "Some of my hobbies", 20, 200, ["whiteTitle"] );
     let title4 = new Writing( "Portraits", 20, 200, ["projLabel"] );
     let title5 = new Writing( "Writing", 20, 200, ["projLabel"] );
-    let title6 = new Writing( "Pencil drawings and more", 30, 200, ["projDesc"] );
-    let title7 = new Writing( "Short stories and more", 30, 200, ["projDesc"] );
     currentScreen = 3;
     $("#selector").css("transform","translate(0px,290px)");
     $("body").css("background-image","");

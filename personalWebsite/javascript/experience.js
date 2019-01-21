@@ -8,32 +8,32 @@ function experienceHTML() {
     "src":"https://www.youtube.com/embed/LPg6Ywen_nM",
     "id":"yVid"
   }).addClass("no-border");
-  let $mainWrapper = $("<div>").addClass("mainWrapper");
 
-  $mainWrapper.append( $textbox, $imagebox );
-  $("#mainContent").append( $mainWrapper );
+  $("#mainContent").append( $imagebox );
+  $("#codeBox").append( $textbox );
   $imagebox.append( $video );
 
   for ( let i = 0; i < 1; i ++ ) {
     let $projectElement = $("<div>");
     $projectElement.addClass("projectElementSmall");
     $projectElement.attr("id", "project" + i);
-    $("#imagebox").append( $projectElement );
+    $("#codeBox").append( $projectElement );
   }
 
   $("#project0").attr("onclick", "window.location = './personalWebsite/projects/otosimposter/template.html'");
-  $("#project0").css({"height":"0px", "transition":"0.5s"});
+  $("#project0").css({"height":"0px", "transition":"0.25s"});
 
-  let width = window.innerWidth - 350 - 50;
+  let width = window.innerWidth - 350;
   $("#mainContent").css("width",width);
-  let height = $("mainContent").height();
+  let height = $("#mainContent").height() - 80;
 
   $("#yVid").css({
     "width": width + "px",
     "height": height + "px"
   });
 
-
   $imagebox.css("background-image","");
+  document.getElementById("codeBox").contentEditable = false;
+
 
 }

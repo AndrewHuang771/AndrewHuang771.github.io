@@ -227,19 +227,23 @@ body{
 }
 
 .projectElementSmall {
-  width:420px;
+  width:120px;
   margin-left:5px;
   margin-right:5px;
-  background-color:#A9CEF4;
+  background-color:transparent;
   display:inline-block;
+  border : white solid 1px;
   margin:0;
   position:relative;
   transition:0.5s;
+  height:50px;
+  color:white;
 }
 
 .projectElementSmall:hover {
   cursor:pointer;
-  opacity:0.5;
+  background-color:white;
+  color:black;
 }
 
 #back {
