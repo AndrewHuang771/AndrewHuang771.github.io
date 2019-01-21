@@ -59,7 +59,6 @@ $(document).ready( function() {
   let $codeBox = $("<div>");
   $codeBox.addClass("codeBox").attr("id","codeBox");
   $("body").append( $codeBox );
-  //Going both directions at once seems to break it. How to prevent this?
 
   goHome();
 });
