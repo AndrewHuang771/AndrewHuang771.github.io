@@ -6,6 +6,17 @@
   position:absolute;
 }
 
+#styler {
+  position:absolute;
+  background-color:#2f628c;
+  width:40vw;
+  height:40vw;
+  border-radius:50%;
+  left:-20vw;
+  top:-25vw;
+  z-index:-4;
+}
+
 #title {
   font-size:100px;
   font-family: 'Aleo', serif;
