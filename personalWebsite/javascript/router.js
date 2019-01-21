@@ -235,9 +235,9 @@ function goOtherProjects() {
 }
 
 function goContact() {
-    let title2 = new Writing( "Let's get in touch", 80, 750, ["title"] );
-    let title3 = new Writing( "I look forward to talking with you", 20, 200, ["whiteTitle"] );
-    let title4 = new Writing( "Email: andrewy.huang@mail.utoronto.ca", 20, 750, ["title"] );
+    let title2 = new Writing( "Let's get in touch", 30, 750, ["title"] );
+    let title3 = new Writing( "I look forward to talking with you", 15, 200, ["whiteTitle"] );
+    let title4 = new Writing( "Email: andrewy.huang@mail.utoronto.ca", 15, 750, ["title"] );
     currentScreen = 4;
     $("#selector").css("transform","translate(0px,380px)");
     $("body").css("background-image","");
@@ -245,8 +245,9 @@ function goContact() {
     clearTypewriterList();
     clearMainContent();
     clearTimeouts();
+    contactHTML();
     highlight( $("#header4") );
-    startTypewriter( $("#mainContent"), [ title2, title3, title4 ] );
+    startTypewriter( $("#codeBox"), [ title2, title3, title4 ] );
 }
 
 function highlight( $element ) {
