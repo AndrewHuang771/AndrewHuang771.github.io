@@ -7,7 +7,8 @@ function experienceHTML() {
 
   $mainWrapper.append( $textbox, $imagebox );
   $("#mainContent").append( $mainWrapper );
-
+  $imagebox.append( $video );
+  
   for ( let i = 0; i < 1; i ++ ) {
     let $projectElement = $("<div>");
     $projectElement.addClass("projectElementSmall");
@@ -18,6 +19,9 @@ function experienceHTML() {
   $("#project0").attr("onclick", "window.location = './personalWebsite/projects/otosimposter/template.html'");
   $("#project0").css({"height":"0px", "transition":"0.5s"});
 
-  $imagebox.append( $video );
+
+
+
+  $imagebox.css("background-image","");
 
 }

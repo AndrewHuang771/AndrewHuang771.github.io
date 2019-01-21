@@ -16,4 +16,5 @@ function otherProjectsHTML() {
   $("#project0").attr("onclick", "window.location = './personalWebsite/art/portfolio.html'");
   $("#project1").attr("onclick", "window.location = './personalWebsite/writing/CloudMaker.html'");
 
+  $imagebox.css("background-image","url('./personalWebsite/images/skyline.jpg')");
 }

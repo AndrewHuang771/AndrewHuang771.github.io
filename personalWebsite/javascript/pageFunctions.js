@@ -29,9 +29,9 @@ function styleHeader() {
   let $header3 = $("<div>").addClass("headerButton").attr("id","header3");
   let $header4 = $("<div>").addClass("headerButton").attr("id","header4");
   let $text0 = $("<p>").addClass("shiftDown").text("Home");
-  let $text1 = $("<p>").addClass("shiftDown").text("Work Experience");
-  let $text2 = $("<p>").addClass("shiftDown").text("Dev Projects");
-  let $text3 = $("<p>").addClass("shiftDown").text("Other Projects");
+  let $text1 = $("<p>").addClass("shiftDown").text("Experience");
+  let $text2 = $("<p>").addClass("shiftDown").text("Projects");
+  let $text3 = $("<p>").addClass("shiftDown").text("Hobbies");
   let $text4 = $("<p>").addClass("shiftDown").text("Contact");
 
   for ( let i = 0; i < 5; i ++ ) {

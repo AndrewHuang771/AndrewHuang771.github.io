@@ -119,7 +119,6 @@ body{
   /* height:100%; */
   background-size:cover;
   background-repeat:no-repeat;
-  background-image:url("./../images/skyline.jpg");
 }
 
 #selector {
@@ -231,7 +230,6 @@ body{
   width:420px;
   margin-left:5px;
   margin-right:5px;
-  height:70px;
   background-color:#A9CEF4;
   display:inline-block;
   margin:0;
