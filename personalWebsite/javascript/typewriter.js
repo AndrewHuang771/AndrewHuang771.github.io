@@ -1,6 +1,5 @@
 const PERIOD_DELAY = 0;
 let typewriterArray = [];
-let numberOfTypeWriters = 0;
 let superSpeed = false;
 
 class Writing {
@@ -24,7 +23,7 @@ class TypeWriter {
     this.writer;
     this.writer1;
     this.counter = 0;
-    this.order = numberOfTypeWriters;
+    this.order = typewriterArray.length;
     this.callback = callback;
   };
 }
@@ -120,6 +119,5 @@ TypeWriter.prototype.delete = function() {
 function startTypewriter( $parent, messages, callback ) {
     let newTypeWriter = new TypeWriter( $parent, messages, callback );
     typewriterArray.push( newTypeWriter );
-    numberOfTypeWriters ++;
-    typewriterArray[ numberOfTypeWriters - 1 ].write();
+    typewriterArray[ typewriterArray.length - 1 ].write();
 }

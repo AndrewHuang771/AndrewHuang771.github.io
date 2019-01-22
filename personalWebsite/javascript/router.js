@@ -2,11 +2,10 @@ let displayTimers = [];
 let timeouts = [];
 
 function clearTypewriterList() {
-    for ( let i = 0; i < numberOfTypeWriters; i ++ ) {
+    for ( let i = 0; i < typewriterArray.length ; i ++ ) {
       typewriterArray[i].delete();
     }
     typewriterArray = [];
-    numberOfTypeWriters = 0;
 }
 
 function clearTimeouts() {
@@ -25,6 +24,26 @@ function clearMainContent() {
     clearInterval( displayTimers[i] );
   }
 
+}
+
+function makeHTMLheader() {
+  let t0 = new Writing( "<!DOCTYPE HTML>", 13, 10, ["code"] );
+  let t1= new Writing( "<html>", 13, 10, ["codeRed"] );
+  let t2 = new Writing( "<head>", 13, 10, ["codeRed"] );
+  let t3 = new Writing( "     <title> Home </title>", 13, 10, ["code"] );
+  let css = new Writing( "     <link href='main.css'>", 13, 10, ["code"] );
+  let t4 = new Writing( "</head>", 13, 10, ["codeRed"] );
+  let t5 = new Writing( "<body>", 13, 10, ["codeRed"] );
+
+  startTypewriter( $("#codeBox"), [ t0,t1,t2,t3 ], function() {
+    $("title").text("Home");
+    startTypewriter( $("#codeBox"), [ css ], function() {
+      startTypewriter( $("#codeBox"), [ t4, t5 ], function() {
+        makeTitle();
+        makeRealTitle();
+      });
+    });
+  });
 }
 
 function makeTitle() {
@@ -55,8 +74,6 @@ function makeRealTitle() {
 function makeSidebar() {
   let t6 = new Writing( "     <div id = 'header'>", 13, 10, ["code"] );
   startTypewriter( $("#codeBox"), [ t6 ], function() {
-    // $("#mainContent").css("margin-left","130px");
-    // $("#sidebar").css("display","block");
     makeButtons();
   });
 }
@@ -69,69 +86,52 @@ function makeButtons() {
   let t11 = new Writing( "           <div id = 'contact'></div>", 13, 10, ["code"] );
   let t12 = new Writing( "      </div>", 13, 10, ["code"] );
 
-  startTypewriter( $("#codeBox"), [ t7 ], function() {
-    $("#home").css("opacity","1");
-  });
+  startTypewriter( $("#codeBox"), [ t7 ] );
 
   timeouts.push( setTimeout( function() {
-    startTypewriter( $("#codeBox"), [ t8 ], function() {
-      $("#experience").css("opacity","1");
-    });
+    startTypewriter( $("#codeBox"), [ t8 ] );
   }, 100 ) );
 
   timeouts.push( setTimeout( function() {
-    startTypewriter( $("#codeBox"), [ t9 ], function() {
-      $("#devProjects").css("opacity","1");
-    });
+    startTypewriter( $("#codeBox"), [ t9 ] );
   }, 200 ) );
 
   timeouts.push( setTimeout( function() {
-    startTypewriter( $("#codeBox"), [ t10 ], function() {
-      $("#otherProjects").css("opacity","1");
-    } );
-
+    startTypewriter( $("#codeBox"), [ t10 ] );
   }, 300 ) );
 
   timeouts.push( setTimeout( function() {
-    startTypewriter( $("#codeBox"), [ t11, t12 ], function() {
-      $("#contact").css("opacity","1");
-      makeFooter();
-    } );
-
+    startTypewriter( $("#codeBox"), [ t11, t12 ] );
+    makeFooter();
   }, 400 ) );
 }
 
 function makeFooter() {
   let footer = new Writing( "      <div id = 'footer'></div>", 13, 10, ["code"] );
+
+  startTypewriter( $("#codeBox"), [ footer ], function() {
+    makeComment();
+  });
+}
+
+function makeComment() {
   let t0 = new Writing( "</body>", 13, 10, ["codeRed"] );
   let t1= new Writing( "</head>", 13, 10, ["codeRed"] );
   let t2 = new Writing( "</html>", 13, 10, ["codeRed"] );
-  startTypewriter( $("#codeBox"), [ footer ], function() {
-    // $("#footer1").css("padding","20px");
-    startTypewriter( $("#codeBox"), [ t0, t1, t2 ], function() {
+  startTypewriter( $("#codeBox"), [ t0, t1, t2 ], function() {
 
-      let time1 = setTimeout( function() {
-        let t3 = new Writing( "<!-- Feel Free to look around by the way -->", 13, 10, ["codeGreen"] );
-        let t4 = new Writing( "<!-- Try scrolling or pressing the buttons! -->", 13, 10, ["codeGreen"] );
-        startTypewriter( $("#codeBox"), [ t3, t4 ] );
-      }, 5000 );
+    timeouts.push( setTimeout( function() {
+      let t3 = new Writing( "<!-- Feel Free to look around by the way -->", 13, 10, ["codeGreen"] );
+      let t4 = new Writing( "<!-- Try scrolling or pressing the buttons! -->", 13, 10, ["codeGreen"] );
+      startTypewriter( $("#codeBox"), [ t3, t4 ] );
+    }, 5000 ));
 
-      timeouts.push( time1 );
-    });
   });
 }
 
 function goHome() {
 
-    let t0 = new Writing( "<!DOCTYPE HTML>", 13, 10, ["code"] );
-    let t1= new Writing( "<html>", 13, 10, ["codeRed"] );
-    let t2 = new Writing( "<head>", 13, 10, ["codeRed"] );
-    let t3 = new Writing( "     <title> Home </title>", 13, 10, ["code"] );
-    let css = new Writing( "     <link href='main.css'>", 13, 10, ["code"] );
-    let t4 = new Writing( "</head>", 13, 10, ["codeRed"] );
-    let t5 = new Writing( "<body>", 13, 10, ["codeRed"] );
     currentScreen = 0;
-    $("#selector").css("transform","translate(0px,5px)");
     $("#shader").css("visibility","visible");
 
     clearTypewriterList();
@@ -144,20 +144,7 @@ function goHome() {
     }
     highlight( $("#header0") );
     superSpeed = true;
-    if ( firstTime || !firstTime ) {
-      startTypewriter( $("#codeBox"), [ t0,t1,t2,t3 ], function() {
-        $("title").text("Home");
-        startTypewriter( $("#codeBox"), [ css ], function() {
-          $(".code").css({"color":"#fafafc","font-family":"'Inconsolata', monospace"});
-          startTypewriter( $("#codeBox"), [ t4, t5 ], function() {
-            makeTitle();
-            makeRealTitle();
-          });
-        });
-      });
-      firstTime = false;
-    }
-
+    makeHTMLheader();
 }
 
 function goExperience() {
@@ -190,12 +177,7 @@ function goDevProjects() {
     let title6 = new Writing( "OrchestraOnline", 20, 200, ["projLabel"] );
     let title7 = new Writing( "Physics Simulations", 20, 200, ["projLabel"] );
     let title8 = new Writing( "Dmoj", 20, 200, ["projLabel"] );
-    let title9 = new Writing( "An online puzzle game", 20, 200, ["projDesc"] );
-    let title10 = new Writing( "University Info Site", 20, 200, ["projDesc"] );
-    let title11 = new Writing( "Plays you music", 20, 200, ["projDesc"] );
-    let title12 = new Writing( "Music Chatrooms", 20, 200, ["projDesc"] );
-    let title13 = new Writing( "Very physical", 20, 200, ["projDesc"] );
-    let title14 = new Writing( "Competitive Programming", 20, 200, ["projDesc"] );
+
     currentScreen = 2;
     $("#selector").css("transform","translate(0px,195px)");
     $("body").css("background-image","");
@@ -210,9 +192,6 @@ function goDevProjects() {
     startTypewriter( $("#project1"), [ title6 ] );
     startTypewriter( $("#project2"), [ title5 ] );
     startTypewriter( $("#project3"), [ title8 ] );
-    // startTypewriter( $("#project4"), [ title7 ] );
-    // startTypewriter( $("#project5"), [ title8 ] );
-
 }
 
 function goOtherProjects() {
