@@ -39,13 +39,19 @@ function homeHTML() {
   let height = $("#mainContent").height();
   $("#mainContent").css("width",width);
 
-
   $("#back").css({
     "left": (width/5) + "px",
     "top": (height/5) + "px"
   });
 
+  let $lineLabel = $("<div>");
+  for ( let i = 1; i < Math.ceil(($("#codeBox").height() - 40) / 16); i ++ ) {
+    $number = $('<div>').text(i).addClass('number');
+    $lineLabel.append($number);
+  }
+  $lineLabel.addClass("lineLabel").attr("id", "lineLabel");
+  $("#mainContent").append( $lineLabel );
+
   document.getElementById("back").contentEditable = true;
   document.getElementById("codeBox").contentEditable = true;
-
 }

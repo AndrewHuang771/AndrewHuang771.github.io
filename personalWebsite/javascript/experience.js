@@ -1,11 +1,43 @@
 function experienceHTML() {
+  // let $textbox = $("<div>").attr( "id", "textbox" );
+  // let $imagebox = $("<div>").attr( "id", "imagebox" );
 
+  // $("#codeBox").append( $textbox );
+  // $("#mainContent").append( $imagebox );
+
+  // let $videos = [
+  //   $("<iframe>").attr({
+  //     "width":"420",
+  //     "height":"315",
+  //     "src":"https://www.youtube.com/embed/krh-VahdOmc",
+  //     "id":"yVid"
+  //   }).addClass("no-border"),
+  //   $("<iframe>").attr({
+  //     "width":"420",
+  //     "height":"315",
+  //     "src":"https://www.youtube.com/embed/xWs_m8P8S7M",
+  //     "id":"yVid"
+  //   }).addClass("no-border")
+  // ];
+
+  // for ( let i = 0; i < 2; i ++ ) {
+  //   let $projectElement = $("<div>");
+  //   $projectElement.addClass("projectElement");
+  //   $projectElement.attr("id", "project" + i);
+  //   $projectElement.append($videos[i]);
+  //   $("#imagebox").append( $projectElement );
+  // }
+
+  // $imagebox.css("background-image","url('./personalWebsite/images/skyline.jpg')");
+
+  // let height = $("#mainContent").height();
+  // $("#imagebox").css("height",height);
   let $textbox = $("<div>").attr( "id", "textbox" );
   let $imagebox = $("<div>").attr( "id", "imagebox" );
   let $video = $("<iframe>").attr({
     "width":"420",
     "height":"315",
-    "src":"https://www.youtube.com/embed/LPg6Ywen_nM",
+    "src":"https://www.youtube.com/embed/xWs_m8P8S7M",
     "id":"yVid"
   }).addClass("no-border");
 

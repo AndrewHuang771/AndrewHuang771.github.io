@@ -82,8 +82,8 @@ function makeButtons() {
   let t7 = new Writing( "           <div id = 'home'></div>", 13, 10, ["code"] );
   let t8 = new Writing( "           <div id = 'experience'></div>", 13, 10, ["code"] );
   let t9 = new Writing( "           <div id = 'devProjects'></div>", 13, 10, ["code"] );
-  let t10 = new Writing( "           <div id = 'otherProjects'></div>", 13, 10, ["code"] );
-  let t11 = new Writing( "           <div id = 'contact'></div>", 13, 10, ["code"] );
+  //let t10 = new Writing( "           <div id = 'otherProjects'></div>", 13, 10, ["code"] );
+  //let t11 = new Writing( "           <div id = 'contact'></div>", 13, 10, ["code"] );
   let t12 = new Writing( "      </div>", 13, 10, ["code"] );
 
   startTypewriter( $("#codeBox"), [ t7 ] );
@@ -96,12 +96,13 @@ function makeButtons() {
     startTypewriter( $("#codeBox"), [ t9 ] );
   }, 200 ) );
 
-  timeouts.push( setTimeout( function() {
-    startTypewriter( $("#codeBox"), [ t10 ] );
-  }, 300 ) );
+  // timeouts.push( setTimeout( function() {
+  //   startTypewriter( $("#codeBox"), [ t10 ] );
+  // }, 300 ) );
 
   timeouts.push( setTimeout( function() {
-    startTypewriter( $("#codeBox"), [ t11, t12 ] );
+    //startTypewriter( $("#codeBox"), [ t11, t12 ] );
+    startTypewriter( $("#codeBox"), [ t12 ] );
     makeFooter();
   }, 400 ) );
 }
@@ -119,13 +120,16 @@ function makeComment() {
   let t1= new Writing( "</head>", 13, 10, ["codeRed"] );
   let t2 = new Writing( "</html>", 13, 10, ["codeRed"] );
   startTypewriter( $("#codeBox"), [ t0, t1, t2 ], function() {
-
     timeouts.push( setTimeout( function() {
       let t3 = new Writing( "<!-- Feel Free to look around by the way -->", 13, 10, ["codeGreen"] );
-      let t4 = new Writing( "<!-- Try scrolling or pressing the buttons! -->", 13, 10, ["codeGreen"] );
-      startTypewriter( $("#codeBox"), [ t3, t4 ] );
-    }, 5000 ));
-
+      let t4 = new Writing( "<!-- Try pressing the tabs! -->", 13, 10, ["codeGreen"] );
+      startTypewriter( $("#codeBox"), [ t3, t4 ], function() {
+        let contact = new Writing("<contact>", 13, 10, ["codeRed"]);
+        let email = new Writing( "  Email: andrewy.huang@mail.utoronto.ca", 13, 10, ["code"] );
+        let endContact = new Writing("</contact>", 13, 10, ["codeRed"]);
+        startTypewriter( $("#codeBox"), [contact, email, endContact] );
+      });
+    }, 1000 ));
   });
 }
 
@@ -151,11 +155,11 @@ function goExperience() {
     let title1 = new Writing( "Full Stack Developer at OtoSim", 20, 200, ["whiteTitle"] );
     let title2 = new Writing( "Experience", 50, 1000, ["title"] );
     let title3 = new Writing( "Poster", 20, 200, ["projLabel"] );
-    currentScreen = 1;
+    currentScreen = 2;
     $("#selector").css("transform","translate(0px,100px)");
     $("#shader").css("visibility","hidden");
     $("body").css("background-image","");
-    highlight( $("#header1") );
+    highlight( $("#header" + currentScreen) );
     clearTypewriterList();
     clearMainContent();
     clearTimeouts();
@@ -168,6 +172,22 @@ function goExperience() {
 
 }
 
+function goIBM() {
+    let title1 = new Writing( "Front End Developer at IBM", 20, 200, ["whiteTitle"] );
+    let title2 = new Writing( "Experience", 50, 1000, ["title"] );
+    currentScreen = 1;
+    $("#selector").css("transform","translate(0px,100px)");
+    $("#shader").css("visibility","hidden");
+    $("body").css("background-image","");
+    highlight( $("#header" + currentScreen) );
+    clearTypewriterList();
+    clearMainContent();
+    clearTimeouts();
+    IBMHTML();
+
+    startTypewriter( $("#textbox"), [ title2, title1 ]);
+}
+
 function goDevProjects() {
     let title1 = new Writing( "Click the boxes to see more", 20, 200, ["whiteTitle"] );
     let title2 = new Writing( "Projects", 50, 1000, ["title"] );
@@ -178,7 +198,7 @@ function goDevProjects() {
     let title7 = new Writing( "Physics Simulations", 20, 200, ["projLabel"] );
     let title8 = new Writing( "Dmoj", 20, 200, ["projLabel"] );
 
-    currentScreen = 2;
+    currentScreen = 3;
     $("#selector").css("transform","translate(0px,195px)");
     $("body").css("background-image","");
     $("#shader").css("visibility","hidden");
@@ -186,7 +206,7 @@ function goDevProjects() {
     clearMainContent();
     clearTimeouts();
     devProjectsHTML();
-    highlight( $("#header2") );
+    highlight( $("#header" + currentScreen) );
     startTypewriter( $("#textbox"), [ title2, title1 ] );
     startTypewriter( $("#project0"), [ title4 ] );
     startTypewriter( $("#project1"), [ title6 ] );
@@ -194,12 +214,28 @@ function goDevProjects() {
     startTypewriter( $("#project3"), [ title8 ] );
 }
 
+function goResume() {
+    let title1 = new Writing( "Front End Developer at IBM", 20, 200, ["whiteTitle"] );
+    let title2 = new Writing( "Experience", 50, 1000, ["title"] );
+    currentScreen = 4;
+    $("#selector").css("transform","translate(0px,100px)");
+    $("#shader").css("visibility","hidden");
+    $("body").css("background-image","");
+    highlight( $("#header" + currentScreen) );
+    clearTypewriterList();
+    clearMainContent();
+    clearTimeouts();
+    resumeHTML();
+
+    startTypewriter( $("#textbox"), [ title2, title1 ]);
+}
+
 function goOtherProjects() {
     let title2 = new Writing( "Other Projects", 40, 750, ["title"] );
     let title3 = new Writing( "Some of my hobbies", 20, 200, ["whiteTitle"] );
     let title4 = new Writing( "Portraits", 20, 200, ["projLabel"] );
     let title5 = new Writing( "Writing", 20, 200, ["projLabel"] );
-    currentScreen = 3;
+    currentScreen = 4;
     $("#selector").css("transform","translate(0px,290px)");
     $("body").css("background-image","");
     $("#shader").css("visibility","hidden");
@@ -217,7 +253,7 @@ function goContact() {
     let title2 = new Writing( "Let's get in touch", 30, 750, ["title"] );
     let title3 = new Writing( "I look forward to talking with you", 15, 200, ["whiteTitle"] );
     let title4 = new Writing( "Email: andrewy.huang@mail.utoronto.ca", 15, 750, ["title"] );
-    currentScreen = 4;
+    currentScreen = 5;
     $("#selector").css("transform","translate(0px,380px)");
     $("body").css("background-image","");
     $("#shader").css("visibility","hidden");
@@ -243,18 +279,22 @@ $( document ).ready( function() {
   });
 
   $("#header1").on( "click", function() {
-    goExperience();
+    goIBM();
   });
 
   $("#header2").on( "click", function() {
-    goDevProjects();
+    goExperience();
   });
 
   $("#header3").on( "click", function() {
-    goOtherProjects();
+    goDevProjects();
   });
 
   $("#header4").on( "click", function() {
+    goResume();
+  });
+
+  $("#header5").on( "click", function() {
     goContact();
   });
 

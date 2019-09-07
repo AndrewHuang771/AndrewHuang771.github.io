@@ -19,7 +19,6 @@ function goToPage() {
   }
 }
 
-
 function styleHeader() {
   let width = $("#vid").width()/5;
 
@@ -28,11 +27,11 @@ function styleHeader() {
   let $header2 = $("<div>").addClass("headerButton").attr("id","header2");
   let $header3 = $("<div>").addClass("headerButton").attr("id","header3");
   let $header4 = $("<div>").addClass("headerButton").attr("id","header4");
-  let $text0 = $("<p>").addClass("shiftDown").text("Home");
-  let $text1 = $("<p>").addClass("shiftDown").text("Experience");
-  let $text2 = $("<p>").addClass("shiftDown").text("Projects");
-  let $text3 = $("<p>").addClass("shiftDown").text("Hobbies");
-  let $text4 = $("<p>").addClass("shiftDown").text("Contact");
+  let $text0 = $("<p>").addClass("shiftDown").text("home.html");
+  let $text1 = $("<p>").addClass("shiftDown").text("IBM.html");
+  let $text2 = $("<p>").addClass("shiftDown").text("OtoSim.html");
+  let $text3 = $("<p>").addClass("shiftDown").text("projects.html");
+  let $text4 = $("<p>").addClass("shiftDown").text("resume.pdf");
 
   for ( let i = 0; i < 5; i ++ ) {
     eval( "$header" + i ).css({
