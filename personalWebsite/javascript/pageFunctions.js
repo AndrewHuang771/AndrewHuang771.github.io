@@ -28,8 +28,8 @@ function styleHeader() {
   let $header3 = $("<div>").addClass("headerButton").attr("id","header3");
   let $header4 = $("<div>").addClass("headerButton").attr("id","header4");
   let $text0 = $("<p>").addClass("shiftDown").text("home.html");
-  let $text1 = $("<p>").addClass("shiftDown").text("IBM.html");
-  let $text2 = $("<p>").addClass("shiftDown").text("OtoSim.html");
+  let $text1 = $("<p>").addClass("shiftDown").text("IBM.mp4");
+  let $text2 = $("<p>").addClass("shiftDown").text("OtoSim.mp4");
   let $text3 = $("<p>").addClass("shiftDown").text("projects.html");
   let $text4 = $("<p>").addClass("shiftDown").text("resume.pdf");
 
