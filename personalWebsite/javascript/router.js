@@ -155,6 +155,7 @@ function goExperience() {
     let title1 = new Writing( "Full Stack Developer at OtoSim", 20, 200, ["whiteTitle"] );
     let title2 = new Writing( "Experience", 50, 1000, ["title"] );
     let title3 = new Writing( "Poster", 20, 200, ["projLabel"] );
+    let desc = new Writing( "See resume for more detailled info", 16, 200, ["whiteTitle"] );
     currentScreen = 2;
     $("#selector").css("transform","translate(0px,100px)");
     $("#shader").css("visibility","hidden");
@@ -165,7 +166,7 @@ function goExperience() {
     clearTimeouts();
     experienceHTML();
 
-    startTypewriter( $("#textbox"), [ title2, title1 ], function() {
+    startTypewriter( $("#textbox"), [ title2, title1, desc ], function() {
       $("#project0").css("height","50px");
       startTypewriter( $("#project0"), [ title3 ] );
     });
@@ -175,6 +176,7 @@ function goExperience() {
 function goIBM() {
     let title1 = new Writing( "Front End Developer at IBM", 20, 200, ["whiteTitle"] );
     let title2 = new Writing( "Experience", 50, 1000, ["title"] );
+    let desc = new Writing( "See resume for more detailled info", 16, 200, ["whiteTitle"] );
     currentScreen = 1;
     $("#selector").css("transform","translate(0px,100px)");
     $("#shader").css("visibility","hidden");
@@ -185,14 +187,14 @@ function goIBM() {
     clearTimeouts();
     IBMHTML();
 
-    startTypewriter( $("#textbox"), [ title2, title1 ]);
+    startTypewriter( $("#textbox"), [ title2, title1, desc ]);
 }
 
 function goDevProjects() {
     let title1 = new Writing( "Click the boxes to see more", 20, 200, ["whiteTitle"] );
     let title2 = new Writing( "Projects", 50, 1000, ["title"] );
     let title3 = new Writing( "Soliloquy", 20, 200, ["projLabel"] );
-    let title4 = new Writing( "UnivInfo", 20, 200, ["projLabel"] );
+    let title4 = new Writing( "Blog", 20, 200, ["projLabel"] );
     let title5 = new Writing( "SoundPlayer", 20, 200, ["projLabel"] );
     let title6 = new Writing( "OrchestraOnline", 20, 200, ["projLabel"] );
     let title7 = new Writing( "Physics Simulations", 20, 200, ["projLabel"] );
