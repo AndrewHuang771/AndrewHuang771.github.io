@@ -198,7 +198,7 @@ function goDevProjects() {
     let title5 = new Writing( "SoundPlayer", 20, 200, ["projLabel"] );
     let title6 = new Writing( "OrchestraOnline", 20, 200, ["projLabel"] );
     let title7 = new Writing( "Physics Simulations", 20, 200, ["projLabel"] );
-    let title8 = new Writing( "Dmoj", 20, 200, ["projLabel"] );
+    let title8 = new Writing( "TD Groups", 20, 200, ["projLabel"] );
 
     currentScreen = 3;
     $("#selector").css("transform","translate(0px,195px)");
