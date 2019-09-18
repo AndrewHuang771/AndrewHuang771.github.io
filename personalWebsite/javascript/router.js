@@ -48,7 +48,7 @@ function makeHTMLheader() {
 
 function makeTitle() {
   let title = new Writing( "     <h1>Hi I'm Andrew</h1>", 13, 10, ["code"] );
-  let title1 = new Writing( "     <p>Let's tell some great stories</p>", 13, 10, ["code"] );
+  let title1 = new Writing( "     <p>Nice to meet you!</p>", 13, 10, ["code"] );
   startTypewriter( $("#codeBox"), [ title, title1 ], function() {
     makeSidebar();
   });
@@ -56,7 +56,7 @@ function makeTitle() {
 
 function makeRealTitle() {
   let title = new Writing( "Hi I'm Andrew", "7vw", 500, ["blueTitle"] );
-  let title1 = new Writing( "Let's tell some great stories", "3vw", 10, ["whiteTitle"] );
+  let title1 = new Writing( "Nice to meet you!", "3vw", 10, ["whiteTitle"] );
 
   let top = $("#vid").height();
   let ownHeight = $("#back").height();
