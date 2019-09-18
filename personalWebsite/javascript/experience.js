@@ -45,15 +45,19 @@ function experienceHTML() {
   $("#codeBox").append( $textbox );
   $imagebox.append( $video );
 
-  for ( let i = 0; i < 1; i ++ ) {
+  for ( let i = 0; i < 2; i ++ ) {
     let $projectElement = $("<div>");
     $projectElement.addClass("projectElementSmall");
     $projectElement.attr("id", "project" + i);
-    $("#codeBox").append( $projectElement );
+    let $br = $("<br>");
+    $("#codeBox").append( $projectElement, $br );
   }
 
   $("#project0").attr("onclick", "window.location = './personalWebsite/projects/otosimposter/template.html'");
   $("#project0").css({"height":"0px", "transition":"0.25s"});
+
+  $("#project1").attr("onclick", "window.location = 'https://www.otosim.com/ophthosim-mobile'");
+  $("#project1").css({"height":"0px", "transition":"0.25s"});
 
   let width = window.innerWidth - 350;
   $("#mainContent").css("width",width);

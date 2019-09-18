@@ -155,7 +155,8 @@ function goExperience() {
     let title1 = new Writing( "Full Stack Developer at OtoSim", 20, 200, ["whiteTitle"] );
     let title2 = new Writing( "Experience", 50, 1000, ["title"] );
     let title3 = new Writing( "Poster", 20, 200, ["projLabel"] );
-    let desc = new Writing( "See resume for more detailled info", 16, 200, ["whiteTitle"] );
+    let desc = new Writing( "See resume for more detailled info,", 16, 200, ["whiteTitle"] );
+    let website = new Writing( "Website", 16, 200, ["projLabel"] );
     currentScreen = 2;
     $("#selector").css("transform","translate(0px,100px)");
     $("#shader").css("visibility","hidden");
@@ -168,7 +169,9 @@ function goExperience() {
 
     startTypewriter( $("#textbox"), [ title2, title1, desc ], function() {
       $("#project0").css("height","50px");
+      $("#project1").css("height","50px");
       startTypewriter( $("#project0"), [ title3 ] );
+      startTypewriter( $("#project1"), [ website ] );
     });
 
 }
