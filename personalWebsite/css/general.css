@@ -279,3 +279,46 @@ body{
   float:right;
   margin-right:10px;
 }
+
+.panel {
+  position:absolute;
+  z-index:10;
+  background-color: white;
+  color:#1B1B1E;
+  padding: 20px;
+  font-size: 25px;
+  border-radius: 5px;
+}
+
+#infoPanel {
+  width: 480px;
+  height:120px;
+  top : 50%;
+  left: 50%;
+  transform:translate(-240px,-60px);
+  text-align:center;
+}
+
+#resumePanel {
+  left: 280px;
+  height: 40px;
+  top: 40px;
+  width: 40px;
+  padding: 0px;
+}
+
+#resumePanel:hover{
+  cursor: pointer;
+}
+
+#githubPanel {
+  left: 360px;
+  height: 40px;
+  top: 40px;
+  width: 40px;
+  padding: 0px;
+}
+
+#githubPanel:hover{
+  cursor: pointer;
+}

@@ -1,0 +1,40 @@
+/* apply a natural box layout model to all elements, but allowing components to change */
+html {
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+body {
+  /* background-color : black; */
+}
+.pixel {
+  display:inline-block;
+  height:40px;
+  width:40px;
+  margin:0;
+  border-bottom: 1px solid #373F51;
+  border-right: 1px solid #373F51;
+}
+
+#grid {
+  width:100vw;
+  height:100vh;
+  line-height:0;
+}
+
+.alive {
+  background-color:#58A4B0;
+}
+
+.aliveSecond {
+  background-color:#A9BCD0;
+}
+
+.dead {
+  background-color:#1B1B1E;
+}
+
+.empty {
+  background-color:#D8DBE2;
+}
